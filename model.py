@@ -5,9 +5,24 @@ from flask_sqlalchemy import SQLAlchemy
 
 db = SQLAlchemy()
 
-# STORE
-# Each store has multiple units
-# Each store has multiple retail items
+class Store(db.Model):
+    """A store"""
+
+    __tablename__="stores"
+
+    id = db.Column(db.Integer, autoincrement=True, primarykey=True)
+    store_number = db.Column(db.Integer, unique = True)
+    address = db.Column(db.String(255))
+    city = db.Column(db.String(255))
+    state = db.Column(db.String(255))
+    zip = db.Column(db.Integer)
+
+    unit = db.relationship("Unit", backref = "units")
+    retail_items = db.relationship("Retail Items", backref = "retail items")
+
+    def __repr__(self):
+        return f'Store number: {self.store_number} -- {self.city}, {self.state}'
+
 
 # UNITS
 # many units per store
