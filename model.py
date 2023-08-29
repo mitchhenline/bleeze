@@ -8,7 +8,7 @@ db = SQLAlchemy()
 class Store(db.Model):
     """A store"""
 
-    __tablename__="stores"
+    __tablename__= "stores"
 
     id = db.Column(db.Integer, autoincrement=True, primarykey=True)
     store_number = db.Column(db.Integer, unique = True)
@@ -17,16 +17,31 @@ class Store(db.Model):
     state = db.Column(db.String(255))
     zip = db.Column(db.Integer)
 
-    unit = db.relationship("Unit", backref = "units")
-    retail_items = db.relationship("Retail Items", backref = "retail items")
+    units = db.relationship("Unit", backref = "store")
+    retail_items = db.relationship("Retail Items", backref = "store")
 
     def __repr__(self):
         return f'Store number: {self.store_number} -- {self.city}, {self.state}'
+    
+class Unit(db.Model):
+    """A unit."""
+
+    __tablename__= "units"
+
+    id = db.Column(db.Integer, autoincrement=True, primarykey=True)
+    unit_number = db.Column(db.String(255), unique = True)
+    size = db.Column(db.String)
+    rented = db.Column(db.Boolean)
+    digital_access = db.Column(db.Boolean)
+    type = db.Column(db.String)
+
+    store_id = db.Column(db.Integer, db.ForeignKey('stores.id'), nullable=False)
+    
+
+    def __repr__(self):
+        return f'Unit number: {self.unit_number}'
 
 
-# UNITS
-# many units per store
-# multiple units per contace
 
 # RENTERS
 #One renter can have multiple units
