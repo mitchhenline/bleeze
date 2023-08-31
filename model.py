@@ -31,7 +31,13 @@ class Renter(db.Model):
     id = db.Column(db.Integer, autoincrement=True, primary_key=True)
     first_name = db.Column(db.String(100))
     last_name = db.Column(db.String(100))
-    # ADD MORE HERE
+    month_of_birth = db.Column(db.String(14))
+    day_of_birth = db.Column(db.Integer)
+    year_of_birth = db.Column(db.Integer)
+    street_address = db.Column(db.String(75))
+    city = db.Column(db.String(75))
+    state = db.Column(db.String(15))
+    phone_number = db.Column(db.String(15))
 
     units = db.relationship("Unit", backref = "renter")
 
@@ -46,7 +52,7 @@ class Unit(db.Model):
     id = db.Column(db.Integer, autoincrement=True, primary_key=True)
     unit_number = db.Column(db.String(255), unique = True)
     size = db.Column(db.String(50))
-    rented = db.Column(db.Boolean)
+    rented = db.Column(db.Boolean, default = False)
     digital_access = db.Column(db.Boolean)
     type = db.Column(db.String(50))
 
@@ -58,8 +64,21 @@ class Unit(db.Model):
         return f'Unit number: {self.unit_number}'
 
 
-# RETAIL ITEMS
-# multiple retail items per store
+class Retail(db.Model):
+    """A retail item."""
+
+    __tablename__ = "retail_items"
+
+    id = db.Column(db.Integer, autoincrement=True, primary_key=True)
+    item_name = db.Column(db.String(50))
+    price = db.Column(db.Float)
+    quantity = db.Column(db.Integer)
+
+    store_id = db.Column(db.Integer, db.ForeignKey('stores.id'), nullable=False)
+
+    def __repr__(self):
+        return f'Retail item: {self.item_name}'
+
 
 def connect_to_db(flask_app, db_uri=os.environ["POSTGRES_URI"], echo=False):
     flask_app.config["SQLALCHEMY_DATABASE_URI"] = db_uri
