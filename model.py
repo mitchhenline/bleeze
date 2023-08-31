@@ -18,7 +18,7 @@ class Store(db.Model):
     zip = db.Column(db.Integer)
 
     units = db.relationship("Unit", backref = "store")
-    retail_items = db.relationship("Retail_Items", backref = "store")
+    retail_items = db.relationship("Retail", backref = "store")
 
     def __repr__(self):
         return f'Store number: {self.store_number} -- {self.city}, {self.state}'
