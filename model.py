@@ -37,6 +37,7 @@ class Renter(db.Model):
     street_address = db.Column(db.String(75))
     city = db.Column(db.String(75))
     state = db.Column(db.String(15))
+    zip = db.Column(db.Integer)
     phone_number = db.Column(db.String(15))
 
     units = db.relationship("Unit", backref = "renter")

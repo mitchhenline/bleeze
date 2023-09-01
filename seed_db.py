@@ -54,7 +54,114 @@ db.session.commit()
 
 #RENTER
 
+renter1 = Renter(first_name = "Mike", last_name = "Norvell", month_of_birth = "August", day_of_birth = 31, year_of_birth = 1974, street_address = "556 Water Street", city = "Tallahasee", state = "Florida", zip = "51323", phone_number = "762-554-0953")
+renter2 = Renter(first_name="Flapdoodle", last_name="Noodlehead", month_of_birth="April", day_of_birth=12, year_of_birth=1988, street_address="123 Giggles Avenue", city="Los Angeles", state="California", zip="98765", phone_number="555-123-4567")
+renter3 = Renter(first_name="Dingleberry", last_name="McGuffin", month_of_birth="February", day_of_birth=29, year_of_birth=1992, street_address="789 Chuckle Road", city="New York", state="New York", zip="12345", phone_number="555-987-6543")
+renter4 = Renter(first_name="Wobblekins", last_name="Teehee", month_of_birth="July", day_of_birth=7, year_of_birth=1977, street_address="456 Laughter Lane", city="Miami", state="Florida", zip="54321", phone_number="555-789-1234")
+renter5 = Renter(first_name="Binky", last_name="Snicklefritz", month_of_birth="December", day_of_birth=25, year_of_birth=1985, street_address="321 Chuckle Street", city="Chicago", state="Illinois", zip="13579", phone_number="555-456-7890")
+renter6 = Renter(first_name="Fluffernutter", last_name="Ticklebottom", month_of_birth="May", day_of_birth=16, year_of_birth=1990, street_address="567 Guffaw Avenue", city="Houston", state="Texas", zip="56789", phone_number="555-234-5678")
+renter7 = Renter(first_name="Squiggly", last_name="Gigglesworth", month_of_birth="September", day_of_birth=3, year_of_birth=1983, street_address="234 Giggles Lane", city="San Francisco", state="California", zip="98765", phone_number="565-876-5432")
+renter8 = Renter(first_name="Boondoggle", last_name="Tickletummy", month_of_birth="March", day_of_birth=8, year_of_birth=1978, street_address="890 Chuckle Road", city="Denver", state="Colorado", zip="54321", phone_number="555-765-4321")
+renter9 = Renter(first_name="Sillypants", last_name="McGiggle", month_of_birth="June", day_of_birth=19, year_of_birth=1995, street_address="432 Laugh Lane", city="Seattle", state="Washington", zip="24680", phone_number="555-654-3210")
+renter10 = Renter(first_name="Zigzag", last_name="Ticklefeather", month_of_birth="October", day_of_birth=10, year_of_birth=1980, street_address="111 Guffaw Street", city="Phoenix", state="Arizona", zip="13579", phone_number="555-321-6543")
+renter11 = Renter(first_name="Giggleberry", last_name="Wobble", month_of_birth="April", day_of_birth=1, year_of_birth=1989, street_address="222 Chuckle Avenue", city="Philadelphia", state="Pennsylvania", zip="98765", phone_number="555-987-1234")
+renter12 = Renter(first_name="Doodle", last_name="Teehee", month_of_birth="January", day_of_birth=5, year_of_birth=1991, street_address="333 Giggles Street", city="Atlanta", state="Georgia", zip="54321", phone_number="555-456-7890")
+renter13 = Renter(first_name="Snickers", last_name="Ticklefeet", month_of_birth="August", day_of_birth=20, year_of_birth=1987, street_address="444 Guffaw Lane", city="Dallas", state="Texas", zip="13579", phone_number="555-123-6543")
+renter14 = Renter(first_name="Giggle", last_name="Chuckleberry", month_of_birth="November", day_of_birth=11, year_of_birth=1982, street_address="555 Chuckle Street", city="Miami", state="Florida", zip="24680", phone_number="555-789-0123")
+
+db.session.add_all([
+    renter1, renter2, renter3, renter4, renter5, renter6, renter7, renter8, renter9, renter10, renter11, renter12, renter13, renter14
+])
+
+db.session.commit()
+
+
 #UNIT
+
+unit1 = Unit(unit_number="A101", size="Small", rented=False, digital_access=True, type="Climate Control", renter_id=1, store_id=1)
+unit2 = Unit(unit_number="A102", size="Medium", rented=True, digital_access=False, type="Parking", renter_id=2, store_id=1)
+unit3 = Unit(unit_number="B201", size="Large", rented=True, digital_access=True, type="Heated", renter_id=3, store_id=2)
+unit4 = Unit(unit_number="B202", size="Small", rented=False, digital_access=False, type="Standard", renter_id=4, store_id=2)
+unit5 = Unit(unit_number="C301", size="Medium", rented=True, digital_access=True, type="Climate Control", renter_id=5, store_id=3)
+unit6 = Unit(unit_number="C302", size="Large", rented=False, digital_access=False, type="Parking", renter_id=6, store_id=3)
+unit7 = Unit(unit_number="D401", size="Small", rented=True, digital_access=True, type="Heated", renter_id=7, store_id=4)
+unit8 = Unit(unit_number="D402", size="Medium", rented=False, digital_access=False, type="Standard", renter_id=8, store_id=4)
+unit9 = Unit(unit_number="E501", size="Large", rented=True, digital_access=True, type="Climate Control", renter_id=9, store_id=5)
+unit10 = Unit(unit_number="E502", size="Small", rented=False, digital_access=False, type="Parking", renter_id=10, store_id=5)
+unit11 = Unit(unit_number="F601", size="Medium", rented=True, digital_access=True, type="Heated", renter_id=11, store_id=6)
+unit12 = Unit(unit_number="F602", size="Large", rented=False, digital_access=False, type="Standard", renter_id=12, store_id=6)
+unit13 = Unit(unit_number="G701", size="Small", rented=True, digital_access=True, type="Climate Control", renter_id=13, store_id=7)
+unit14 = Unit(unit_number="G702", size="Medium", rented=False, digital_access=False, type="Parking", renter_id=14, store_id=7)
+unit15 = Unit(unit_number="H801", size="Large", rented=True, digital_access=True, type="Heated", renter_id=1, store_id=8)
+unit16 = Unit(unit_number="H802", size="Small", rented=False, digital_access=False, type="Standard", renter_id=2, store_id=8)
+unit17 = Unit(unit_number="I901", size="Medium", rented=True, digital_access=True, type="Climate Control", renter_id=3, store_id=9)
+unit18 = Unit(unit_number="I902", size="Large", rented=False, digital_access=False, type="Parking", renter_id=4, store_id=9)
+unit19 = Unit(unit_number="J1001", size="Small", rented=True, digital_access=True, type="Heated", renter_id=5, store_id=10)
+unit20 = Unit(unit_number="J1002", size="Medium", rented=False, digital_access=False, type="Standard", renter_id=6, store_id=10)
+unit21 = Unit(unit_number="K1101", size="Large", rented=True, digital_access=True, type="Climate Control", renter_id=7, store_id=11)
+unit22 = Unit(unit_number="K1102", size="Small", rented=False, digital_access=False, type="Parking", renter_id=8, store_id=11)
+unit23 = Unit(unit_number="L1201", size="Medium", rented=True, digital_access=True, type="Heated", renter_id=9, store_id=12)
+unit24 = Unit(unit_number="L1202", size="Large", rented=False, digital_access=False, type="Standard", renter_id=10, store_id=12)
+unit25 = Unit(unit_number="M1301", size="Small", rented=True, digital_access=True, type="Climate Control", renter_id=11, store_id=13)
+unit26 = Unit(unit_number="M1302", size="Medium", rented=False, digital_access=False, type="Parking", renter_id=12, store_id=13)
+unit27 = Unit(unit_number="N1401", size="Large", rented=True, digital_access=True, type="Heated", renter_id=13, store_id=14)
+unit28 = Unit(unit_number="N1402", size="Small", rented=False, digital_access=False, type="Standard", renter_id=14, store_id=14)
+unit29 = Unit(unit_number="O1501", size="Medium", rented=True, digital_access=True, type="Climate Control", renter_id=1, store_id=15)
+unit30 = Unit(unit_number="O1502", size="Large", rented=False, digital_access=False, type="Parking", renter_id=2, store_id=15)
+
+
+db.session.add_all([unit1, unit2, unit3, unit4, unit5, unit6, unit7, unit8, unit9, unit10, 
+                   unit11, unit12, unit13, unit14, unit15, unit16, unit17, unit18, unit19, 
+                   unit20, unit21, unit22, unit23, unit24, unit25, unit26, unit27, unit28, unit29, unit30])
+
+db.session.commit()
+
 
 #RETAIL
 
+retail1 = Retail(item_name="Lock", price=10.99, quantity=50, store_id=1)
+retail2 = Retail(item_name="Box", price=5.99, quantity=100, store_id=1)
+retail3 = Retail(item_name="Tape", price=1.99, quantity=200, store_id=1)
+retail4 = Retail(item_name="Combination Lock", price=15.99, quantity=30, store_id=1)
+
+retail5 = Retail(item_name="Lock", price=10.99, quantity=40, store_id=2)
+retail6 = Retail(item_name="Box", price=5.99, quantity=80, store_id=2)
+retail7 = Retail(item_name="Tape", price=1.99, quantity=150, store_id=2)
+retail8 = Retail(item_name="Combination Lock", price=15.99, quantity=25, store_id=2)
+
+retail9 = Retail(item_name="Lock", price=10.99, quantity=45, store_id=3)
+retail10 = Retail(item_name="Box", price=5.99, quantity=90, store_id=3)
+retail11 = Retail(item_name="Tape", price=1.99, quantity=180, store_id=3)
+retail12 = Retail(item_name="Combination Lock", price=15.99, quantity=35, store_id=3)
+
+retail13 = Retail(item_name="Lock", price=10.99, quantity=55, store_id=4)
+retail14 = Retail(item_name="Box", price=5.99, quantity=75, store_id=4)
+retail15 = Retail(item_name="Tape", price=1.99, quantity=170, store_id=4)
+retail16 = Retail(item_name="Combination Lock", price=15.99, quantity=28, store_id=4)
+
+retail17 = Retail(item_name="Lock", price=10.99, quantity=48, store_id=5)
+retail18 = Retail(item_name="Box", price=5.99, quantity=88, store_id=5)
+retail19 = Retail(item_name="Tape", price=1.99, quantity=160, store_id=5)
+retail20 = Retail(item_name="Combination Lock", price=15.99, quantity=33, store_id=5)
+
+retail21 = Retail(item_name="Lock", price=10.99, quantity=53, store_id=6)
+retail22 = Retail(item_name="Box", price=5.99, quantity=95, store_id=6)
+retail23 = Retail(item_name="Tape", price=1.99, quantity=175, store_id=6)
+retail24 = Retail(item_name="Combination Lock", price=15.99, quantity=27, store_id=6)
+
+retail25 = Retail(item_name="Lock", price=10.99, quantity=60, store_id=7)
+retail26 = Retail(item_name="Box", price=5.99, quantity=85, store_id=7)
+retail27 = Retail(item_name="Tape", price=1.99, quantity=190, store_id=7)
+retail28 = Retail(item_name="Combination Lock", price=15.99, quantity=40, store_id=7)
+
+retail29 = Retail(item_name="Lock", price=10.99, quantity=38, store_id=8)
+retail30 = Retail(item_name="Box", price=5.99, quantity=70, store_id=8)
+retail31 = Retail(item_name="Tape", price=1.99, quantity=155, store_id=8)
+retail32 = Retail(item_name="Combination Lock", price=15.99, quantity=23, store_id=8)
+
+db.session.add_all([retail1, retail2, retail3, retail4, retail5, retail6, retail7, retail8,
+                   retail9, retail10, retail11, retail12, retail13, retail14, retail15, retail16,
+                   retail17, retail18, retail19, retail20, retail21, retail22, retail23, retail24,
+                   retail25, retail26, retail27, retail28, retail29, retail30, retail31, retail32])
+
+db.session.commit()
