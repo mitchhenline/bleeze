@@ -30,10 +30,10 @@ def store_select():
 @app.route('/<int:store_id>')
 def view_store(store_id):
     """View store."""
-    # units = crud.get_units_by_store_id(session['store_id'])
+    units = crud.get_units_by_store_id(store_id)
 
 
-    return render_template("store.html")
+    return render_template("store.html", units = units)
     
 
 if __name__ == "__main__":

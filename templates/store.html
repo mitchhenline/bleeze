@@ -6,8 +6,9 @@
 <h1>Welcome to Bleeze</h1>
 
 <div id="customer_list_div">
-
-    
+    {% for unit in units %}
+        {{ unit.id }} {{ unit.renter_id }}
+    {% endfor %}
 </div>
 
 {% endblock %}
