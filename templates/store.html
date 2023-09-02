@@ -4,14 +4,16 @@
 {% block body %}
 
 <h1>Welcome to Bleeze</h1>
+<a href = "/">Select another store</a>
+
 
 <div id="customer_list_div">
     <h2>Bleeze Self Storage</h2>
-    <h3>{{ store.address }} {{ store.city }}, {{ store.state }}</h3>
+    <h3>{{ store.address }} - {{ store.city }}, {{ store.state }}</h3>
     <table>
         <tr>
             <th>Unit Number</th>
-            <th>Rented</th>
+            <th>Unit Status</th>
             <th>Renter</th>
         </tr>
         {% for unit in units %}
@@ -19,16 +21,16 @@
             <td>{{ unit.unit_number }}</td>
             <td>
                 {% if unit.rented %}
-                    Yes
+                    Occupied
                 {% else %}
-                    No
+                    Vacant
                 {% endif %}
             </td>
             <td>
                 {% if unit.rented %}
                     {{ unit.renter.first_name }} {{ unit.renter.last_name }}
                 {% else %}
-                    N/A
+                    -
                 {% endif %}
             </td>
         </tr>
