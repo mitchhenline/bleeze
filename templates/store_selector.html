@@ -5,4 +5,15 @@
 
 <h1>Welcome to Bleeze</h1>
 
+<form method="POST" action="/">
+    {{ form.store_id.label }}: {{ form.store_id }}
+
+    
+    {{ form.csrf_token }}
+    <button type="submit">Sign In</button>
+    {% for message in get_flashed_messages() %}
+        <h3>{{ message }}</h3>
+    {% endfor %}
+</form>
+
 {% endblock %}

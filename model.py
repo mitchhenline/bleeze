@@ -11,7 +11,6 @@ class Store(db.Model):
     __tablename__= "stores"
 
     id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    store_number = db.Column(db.Integer, unique = True)
     address = db.Column(db.String(255))
     city = db.Column(db.String(255))
     state = db.Column(db.String(255))

@@ -18,27 +18,28 @@ db.create_all()
 
 
 #STORE
-store1 = Store(store_number = 2055, address = "450 South Nuggets Way", city = "Denver", state = "Colorado", zip = 80014)
-store2 = Store(store_number=3001, address="123 Main Street", city="New York", state="New York", zip=10001)
-store3 = Store(store_number=4567, address="789 Elm Avenue", city="Los Angeles", state="California", zip=90001)
-store4 = Store(store_number=8012, address="456 Oak Road", city="Chicago", state="Illinois", zip=60601)
-store5 = Store(store_number=6023, address="789 Maple Lane", city="San Francisco", state="California", zip=94101)
-store6 = Store(store_number=9876, address="101 Pine Street", city="Seattle", state="Washington", zip=98101)
-store7 = Store(store_number=2345, address="567 Cedar Drive", city="Miami", state="Florida", zip=33101)
-store8 = Store(store_number=1111, address="222 Birch Street", city="Houston", state="Texas", zip=77001)
-store9 = Store(store_number=9090, address="333 Redwood Lane", city="Atlanta", state="Georgia", zip=30301)
-store10 = Store(store_number=7007, address="888 Sequoia Road", city="Boston", state="Massachusetts", zip=54435)
-store11 = Store(store_number=1234, address="555 Willow Street", city="Phoenix", state="Arizona", zip=85001)
-store12 = Store(store_number=9870, address="123 Elm Avenue", city="Dallas", state="Texas", zip=75201)
-store13 = Store(store_number=5678, address="456 Oak Drive", city="San Diego", state="California", zip=92101)
-store14 = Store(store_number=3333, address="777 Maple Lane", city="Portland", state="Oregon", zip=97201)
-store15 = Store(store_number=8888, address="101 Pine Road", city="Minneapolis", state="Minnesota", zip=55401)
-store16 = Store(store_number=5515, address="222 Cedar Street", city="Las Vegas", state="Nevada", zip=89101)
-store17 = Store(store_number=2202, address="888 Birch Drive", city="Philadelphia", state="Pennsylvania", zip=19101)
-store18 = Store(store_number=6106, address="333 Redwood Road", city="Detroit", state="Michigan", zip=48201)
-store19 = Store(store_number=4454, address="999 Sequoia Avenue", city="Orlando", state="Florida", zip=32801)
-store20 = Store(store_number=1311, address="777 Redwood Drive", city="San Antonio", state="Texas", zip=78201)
-store21 = Store(store_number=6789, address="123 Salt Lake Avenue", city="Salt Lake City", state="Utah", zip=84101)
+store1 = Store(address="450 South Nuggets Way", city="Denver", state="Colorado", zip=80014)
+store2 = Store(address="123 Main Street", city="New York", state="New York", zip=10001)
+store3 = Store(address="789 Elm Avenue", city="Los Angeles", state="California", zip=90001)
+store4 = Store(address="456 Oak Road", city="Chicago", state="Illinois", zip=60601)
+store5 = Store(address="789 Maple Lane", city="San Francisco", state="California", zip=94101)
+store6 = Store(address="101 Pine Street", city="Seattle", state="Washington", zip=98101)
+store7 = Store(address="567 Cedar Drive", city="Miami", state="Florida", zip=33101)
+store8 = Store(address="222 Birch Street", city="Houston", state="Texas", zip=77001)
+store9 = Store(address="333 Redwood Lane", city="Atlanta", state="Georgia", zip=30301)
+store10 = Store(address="888 Sequoia Road", city="Boston", state="Massachusetts", zip=54435)
+store11 = Store(address="555 Willow Street", city="Phoenix", state="Arizona", zip=85001)
+store12 = Store(address="123 Elm Avenue", city="Dallas", state="Texas", zip=75201)
+store13 = Store(address="456 Oak Drive", city="San Diego", state="California", zip=92101)
+store14 = Store(address="777 Maple Lane", city="Portland", state="Oregon", zip=97201)
+store15 = Store(address="101 Pine Road", city="Minneapolis", state="Minnesota", zip=55401)
+store16 = Store(address="222 Cedar Street", city="Las Vegas", state="Nevada", zip=89101)
+store17 = Store(address="888 Birch Drive", city="Philadelphia", state="Pennsylvania", zip=19101)
+store18 = Store(address="333 Redwood Road", city="Detroit", state="Michigan", zip=48201)
+store19 = Store(address="999 Sequoia Avenue", city="Orlando", state="Florida", zip=32801)
+store20 = Store(address="777 Redwood Drive", city="San Antonio", state="Texas", zip=78201)
+store21 = Store(address="123 Salt Lake Avenue", city="Salt Lake City", state="Utah", zip=84101)
+
 
 db.session.add_all([
     store1, store2, store3, store4, store5,
@@ -48,9 +49,6 @@ db.session.add_all([
     store21
 ])
 
-
-
-db.session.commit()
 
 #RENTER
 
@@ -72,8 +70,6 @@ renter14 = Renter(first_name="Giggle", last_name="Chuckleberry", month_of_birth=
 db.session.add_all([
     renter1, renter2, renter3, renter4, renter5, renter6, renter7, renter8, renter9, renter10, renter11, renter12, renter13, renter14
 ])
-
-db.session.commit()
 
 
 #UNIT
@@ -113,8 +109,6 @@ unit30 = Unit(unit_number="O1502", size="Large", rented=False, digital_access=Fa
 db.session.add_all([unit1, unit2, unit3, unit4, unit5, unit6, unit7, unit8, unit9, unit10, 
                    unit11, unit12, unit13, unit14, unit15, unit16, unit17, unit18, unit19, 
                    unit20, unit21, unit22, unit23, unit24, unit25, unit26, unit27, unit28, unit29, unit30])
-
-db.session.commit()
 
 
 #RETAIL
