@@ -3,8 +3,9 @@
 
 {% block body %}
 
-<h1>Welcome to Bleeze</h1>
+<h1>Unit Manager</h1>
 <a href = "/">Select another store</a>
+<a href = "/retail/{{ store.id }}">Retail</a>
 
 
 <div id="customer_list_div">
@@ -14,6 +15,7 @@
         <tr>
             <th>Unit Number</th>
             <th>Unit Status</th>
+            <th>Type</th>
             <th>Renter</th>
         </tr>
         {% for unit in units %}
@@ -26,6 +28,7 @@
                     Vacant
                 {% endif %}
             </td>
+            <td>{{ unit.type }}</td>
             <td>
                 {% if unit.rented %}
                     {{ unit.renter.first_name }} {{ unit.renter.last_name }}

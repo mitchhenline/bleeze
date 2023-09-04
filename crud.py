@@ -8,6 +8,9 @@ def get_units_by_store_id(store_id):
 def get_store_by_id(store_id):
     return Store.query.filter(Store.id == store_id).first()
 
+def get_retail_by_store_id(store_id):
+    return Retail.query.filter(Retail.store_id == store_id).all()
+
 def is_valid_store(store_id):
     """Check if the store number exists in the database."""
     store = Store.query.filter_by(id=store_id).first()

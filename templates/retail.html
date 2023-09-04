@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Bleeze{% endblock %}
+
+{% block body %}
+
+<h1>Bleeze Retail</h1>
+<a href = "/">Select another store</a>
+<a href = "/{{ store.id }}">Unit Manager</a>
+
+
+<div id="retail_list_div">
+    <h2>Retail items</h2>
+    <table>
+        <tr>
+            <th>Item name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+        </tr>
+        {% for retail in retail %}
+        <tr>
+            <td>{{ retail.item_name }}</td>
+            <td>{{ retail.price }}</td>
+            <td>{{ retail.quantity }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+{% endblock %}

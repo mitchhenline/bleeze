@@ -34,6 +34,14 @@ def view_store(store_id):
     store = crud.get_store_by_id(store_id)
 
     return render_template("store.html", units = units, store = store)
+
+@app.route('/retail/<int:store_id>')
+def view_store_retail(store_id):
+    """View store retail."""
+    retail = crud.get_retail_by_store_id(store_id)
+    store = crud.get_store_by_id(store_id)
+
+    return render_template("retail.html", retail = retail, store = store)
     
 
 if __name__ == "__main__":
