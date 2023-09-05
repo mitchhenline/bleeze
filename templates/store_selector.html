@@ -5,15 +5,18 @@
 
 <h1>Welcome to Bleeze</h1>
 
-<form method="POST" action="/">
-    {{ form.store_id.label }}: {{ form.store_id }}
 
-    
-    {{ form.csrf_token }}
-    <button type="submit">Submit</button>
-    {% for message in get_flashed_messages() %}
-        <h3>{{ message }}</h3>
-    {% endfor %}
-</form>
+<div id="store_selector_box">
+    <form id="store_selector_form" method="POST" action="/">
+        {{ form.csrf_token }}
+        <div class="form-group">
+            <input type="number" class="form-control" name="store_id" id="store_id" placeholder="{{ form.store_id.label.text }}" value="{{ form.store_id.data }}">
+        </div>
+        <button type="submit">Submit</button>
+        {% for message in get_flashed_messages() %}
+            <h3>{{ message }}</h3>
+        {% endfor %}
+    </form>
+</div>
 
 {% endblock %}

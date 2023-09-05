@@ -1,0 +1,17 @@
+/* ----------STORE SELECTOR PAGE---------- */
+
+#store_selector_box {
+    width: 25%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    border: solid;
+    border-width: 1px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#store_selector_form {
+    margin-left: auto;
+    margin-right: auto;
+}
