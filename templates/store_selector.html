@@ -10,7 +10,7 @@
 
     
     {{ form.csrf_token }}
-    <button type="submit">Sign In</button>
+    <button type="submit">Submit</button>
     {% for message in get_flashed_messages() %}
         <h3>{{ message }}</h3>
     {% endfor %}
