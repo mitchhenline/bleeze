@@ -8,37 +8,23 @@
 <a href = "/retail/{{ store.id }}">Retail</a>
 
 
-<div id="customer_list_div">
+<div id="unit_list_div">
     <h2>Bleeze Self Storage</h2>
     <h3>{{ store.address }} - {{ store.city }}, {{ store.state }}</h3>
-    <table>
-        <tr>
-            <th>Unit Number</th>
-            <th>Unit Status</th>
-            <th>Type</th>
-            <th>Renter</th>
-        </tr>
+    
+    <div class="unit-item">
         {% for unit in units %}
-        <tr>
-            <td>{{ unit.unit_number }}</td>
-            <td>
-                {% if unit.rented %}
-                    Occupied
-                {% else %}
-                    Vacant
-                {% endif %}
-            </td>
-            <td>{{ unit.type }}</td>
-            <td>
-                {% if unit.rented %}
-                    {{ unit.renter.first_name }} {{ unit.renter.last_name }}
-                {% else %}
-                    -
-                {% endif %}
-            </td>
-        </tr>
+        <div class="unit">
+            <a href="/retail/{{ store.id }}/unit/{{ unit.id }}">
+                <h4>Unit Number: {{ unit.unit_number }}</h4>
+            </a>
+            <p>Status: {% if unit.rented %}Occupied{% else %}Vacant{% endif %}</p>
+            <p>Type: {{ unit.type }}</p>
+            <p>Renter: {% if unit.rented %}{{ unit.renter.first_name }} {{ unit.renter.last_name }}{% else %}-{% endif %}</p>
+        </div>
         {% endfor %}
-    </table>
+    </div>
 </div>
+
 
 {% endblock %}

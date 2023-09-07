@@ -1,7 +1,16 @@
 /* ----------STORE SELECTOR PAGE---------- */
 
+#above-line {
+    background: rgb(66, 65, 65);
+}
+
+#below-line {
+    background: rgb(152, 152, 152);
+}
+
 #store_selector_box {
-    width: 25%;
+    margin-top: 10%;
+    width: 30%;
     padding-top: 10%;
     padding-bottom: 10%;
     border: solid;
@@ -9,9 +18,23 @@
 
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
+    background-color: white;
+    position: relative;
+    z-index: 1;
 }
 
 #store_selector_form {
     margin-left: auto;
     margin-right: auto;
+}
+
+#line {
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    position: absolute;
+    top: 30%;
+    transform: translateY(-50%);
+    z-index: -1;
 }

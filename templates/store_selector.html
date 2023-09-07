@@ -3,20 +3,27 @@
 
 {% block body %}
 
-<h1>Welcome to Bleeze</h1>
+<div id="above-line">
+    
+</div>
 
+<div id="line"></div>
 
 <div id="store_selector_box">
     <form id="store_selector_form" method="POST" action="/">
         {{ form.csrf_token }}
         <div class="form-group">
             <input type="number" class="form-control" name="store_id" id="store_id" placeholder="{{ form.store_id.label.text }}" value="{{ form.store_id.data }}">
+            <button type="submit">Go</button>
         </div>
-        <button type="submit">Submit</button>
         {% for message in get_flashed_messages() %}
             <h3>{{ message }}</h3>
         {% endfor %}
     </form>
+</div>
+
+<div id="below-line">
+    <!-- Content above the line -->
 </div>
 
 {% endblock %}
