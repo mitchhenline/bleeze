@@ -42,7 +42,14 @@ def view_store_retail(store_id):
     store = crud.get_store_by_id(store_id)
 
     return render_template("retail.html", retail = retail, store = store)
-    
+
+@app.route('/retail/<int:store_id>/unit/<int:unit_id>')
+def view_unit(store_id, unit_id):
+    """View unit details."""
+    unit = crud.get_unit_by_id(unit_id)
+    store = crud.get_store_by_id(store_id)
+
+    return render_template("unit.html", unit=unit, store=store)
 
 if __name__ == "__main__":
     connect_to_db(app)
