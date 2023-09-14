@@ -1,3 +1,11 @@
 1. customer info page
-2. figure out what info you need on model and adjust
-3. 
+    -make customer name's clickable
+    -send it to a page
+    -Create "tenant manager page"
+2. do basic styling
+    -in store, option to view occupied, view vacant, view by type, etc
+3. add forms, buttons to rent units etc
+    -new customer form
+    -select unit
+    -drop down list of customers (for now on a special 'rent unit' page)
+        -put linnk to 'rent unit' page in the unit manager page
