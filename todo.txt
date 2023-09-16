@@ -1,6 +1,4 @@
 1. customer info page
-    -make customer name's clickable
-    -send it to a page
     -Create "tenant manager page"
 2. do basic styling
     -in store, option to view occupied, view vacant, view by type, etc
