@@ -11,7 +11,7 @@
 
 <div>
     <h2>{{ unit.unit_number }}</h2>
-    <h2>Tenant: {{ unit.renter }}</h2>
+    <a href= "/renter/{{ unit.renter.id }}">Tenant: {{ unit.renter }}</a>
     <h2>Status: {% if unit.rented %}Occupied{% else %}Vacant{% endif %}</h2>
     <h2>Size: {{ unit.size }}</h2>
     <h2>Type: {{ unit.type }}</h2>

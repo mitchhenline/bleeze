@@ -51,6 +51,13 @@ def view_unit(store_id, unit_id):
 
     return render_template("unit.html", unit=unit, store=store)
 
+@app.route('/renter/<int:renter_id>')
+def view_renter(renter_id):
+    """View unit details."""
+    renter = crud.get_renter_by_id(renter_id)
+
+    return render_template("renter.html", renter=renter)
+
 if __name__ == "__main__":
     connect_to_db(app)
     app.run(host="0.0.0.0", debug=True)

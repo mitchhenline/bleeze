@@ -14,6 +14,9 @@ def get_retail_by_store_id(store_id):
 def get_unit_by_id(unit_id):
     return Unit.query.filter(Unit.id == unit_id).first()
 
+def get_renter_by_id(renter_id):
+    return Renter.query.filter(Renter.id == renter_id).first()
+
 def is_valid_store(store_id):
     """Check if the store number exists in the database."""
     store = Store.query.filter_by(id=store_id).first()
