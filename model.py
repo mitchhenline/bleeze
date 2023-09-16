@@ -38,6 +38,7 @@ class Renter(db.Model):
     state = db.Column(db.String(15))
     zip = db.Column(db.Integer)
     phone_number = db.Column(db.String(15))
+    
 
     units = db.relationship("Unit", backref = "renter")
 
