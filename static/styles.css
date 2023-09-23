@@ -1,7 +1,7 @@
 
 /* ----------------BASE------------------- */
 #body {
-    background: rgba(147, 12, 154, 0.578);
+    background: rgba(185, 28, 193, 0.578);
 }
 
 
@@ -44,4 +44,32 @@
     top: 30%;
     transform: translateY(-50%);
     z-index: -1;
+}
+
+/* ----------STORE PAGE, UNIT SELECTOR---------- */
+
+#unit_list_div {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 80%; /* Adjust this value as needed to control the maximum height of the box */
+    overflow: auto;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.unit-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.unit-item.even {
+    background-color: #f0f0f0;
+}
+
+.unit-item.odd {
+    background-color: white;
 }

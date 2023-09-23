@@ -7,24 +7,20 @@
 <a href = "/">Select another store</a>
 <a href = "/retail/{{ store.id }}">Retail</a>
 
+<h2>Bleeze Self Storage</h2>
+    <h3>{{ store.address }} - {{ store.city }}, {{ store.state }}</h3>
 
 <div id="unit_list_div">
-    <h2>Bleeze Self Storage</h2>
-    <h3>{{ store.address }} - {{ store.city }}, {{ store.state }}</h3>
-    
-    <div class="unit-item">
         {% for unit in units %}
-        <div class="unit">
+        <div class="unit-item {% if loop.index is divisibleby(2) %}even{% else %}odd{% endif %}">
             <a href="/retail/{{ store.id }}/unit/{{ unit.id }}">
                 <h4>Unit Number: {{ unit.unit_number }}</h4>
             </a>
             <p>Status: {% if unit.rented %}Occupied{% else %}Vacant{% endif %}</p>
             <p>Type: {{ unit.type }}</p>
-            <p>Renter: {% if unit.rented %}<a href= "/renter/{{ unit.renter.id }}">{{ unit.renter.first_name }} {{ unit.renter.last_name }}</a>{% else %}-{% endif %}</p>
+            <p>Renter: {% if unit.rented %}<a href="/renter/{{ unit.renter.id }}">{{ unit.renter.first_name }} {{ unit.renter.last_name }}</a>{% else %}-{% endif %}</p>
         </div>
         {% endfor %}
-    </div>
 </div>
-
 
 {% endblock %}
