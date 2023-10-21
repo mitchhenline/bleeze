@@ -53,11 +53,12 @@ def view_unit(store_id, unit_id):
 
 @app.route('/renter/<int:renter_id>')
 def view_renter(renter_id):
-    """View unit details."""
+    """View tenant details."""
     renter = crud.get_renter_by_id(renter_id)
-    unit = crud.get_unit_by_renter_id(renter_id)
+    units = crud.get_units_by_renter_id(renter_id)
 
-    return render_template("renter.html", renter=renter, unit = unit)
+    return render_template("renter.html", renter=renter, units=units)
+
 
 if __name__ == "__main__":
     connect_to_db(app)

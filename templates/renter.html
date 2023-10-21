@@ -16,6 +16,18 @@
     <h3>Email: ADD EMAIL TO RENTER DB</h3>
 </div>
 
+<!-- added section -->
+<h3>Units Rented:</h3>
+    <ul>
+        {% for unit in renter.units %}
+            <li>
+                <a href="{{ url_for('view_unit', store_id=unit.store.id, unit_id=unit.id) }}">
+                    Unit: {{ unit.unit_number }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+
 
 
 

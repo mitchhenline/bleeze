@@ -17,7 +17,7 @@ def get_unit_by_id(unit_id):
 def get_renter_by_id(renter_id):
     return Renter.query.filter(Renter.id == renter_id).first()
 
-def get_unit_by_renter_id(renter_id):
+def get_units_by_renter_id(renter_id):
     return Unit.query.filter(Unit.renter_id == renter_id).all()
 
 

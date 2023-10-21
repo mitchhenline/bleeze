@@ -1,5 +1,3 @@
-fix user id None attribute
-
 
 1. customer info page
     -Create "tenant manager page"
