@@ -3,21 +3,23 @@
 
 {% block body %}
 
-<h1>Unit Manager</h1>
-<a href = "/">Select another store</a>
-<a href = "/{{ store.id }}">Back to store</a>
-<a href = "/retail/{{ store.id }}">Retail</a>
-
-
-<div>
-    <h2>{{ unit.unit_number }}</h2>
-    <h2>Tenant: {% if unit.renter %}<a href="/renter/{{ unit.renter.id }}">{{ unit.renter.first_name }} {{ unit.renter.last_name }}</a>{% else %}Vacant{% endif %}</h2>
-    <h2>Status: {% if unit.rented %}Occupied{% else %}Vacant{% endif %}</h2>
-    <h2>Size: {{ unit.size }}</h2>
-    <h2>Type: {{ unit.type }}</h2>
-    <h2>Digital Access: {% if unit.digital_access %}Yes{% else %}No{% endif %}</h2>
-    
+<div class="header">
+    <h1>Unit Manager</h1>
+    <a href = "/">Select another store</a>
+    <a href = "/{{ store.id }}">Back to store</a>
+    <a href = "/retail/{{ store.id }}">Retail</a>
 </div>
 
+
+<div class="main-body">
+    <div>
+        <h2>{{ unit.unit_number }}</h2>
+        <h2>Tenant: {% if unit.renter %}<a href="/renter/{{ unit.renter.id }}">{{ unit.renter.first_name }} {{ unit.renter.last_name }}</a>{% else %}Vacant{% endif %}</h2>
+        <h2>Status: {% if unit.rented %}Occupied{% else %}Vacant{% endif %}</h2>
+        <h2>Size: {{ unit.size }}</h2>
+        <h2>Type: {{ unit.type }}</h2>
+        <h2>Digital Access: {% if unit.digital_access %}Yes{% else %}No{% endif %}</h2> 
+    </div>
+</div>
 
 {% endblock %}

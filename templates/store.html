@@ -3,14 +3,19 @@
 
 {% block body %}
 
-<h1>Store {{ store.id }}</h1>
-<a href = "/">Select another store</a>
-<a href = "/retail/{{ store.id }}">Retail</a>
+<div class = header>
 
-<h2>Bleeze Self Storage</h2>
-    <h3>{{ store.address }} - {{ store.city }}, {{ store.state }}</h3>
+    <h1>Store {{ store.id }}</h1>
+    <a href = "/">Select another store</a>
+    <a href = "/retail/{{ store.id }}">Retail</a>
 
-<div id="unit_list_div">
+    <h2>Bleeze Self Storage</h2>
+        <h3>{{ store.address }} - {{ store.city }}, {{ store.state }}</h3>
+
+</div>
+
+<div class="main-body">
+    <div id="unit_list_div">
         {% for unit in units %}
         <div class="unit-item {% if loop.index is divisibleby(2) %}even{% else %}odd{% endif %}">
             <a href="/retail/{{ store.id }}/unit/{{ unit.id }}">
@@ -21,6 +26,7 @@
             <p>Renter: {% if unit.renter %}<a href="/renter/{{ unit.renter.id }}">{{ unit.renter.first_name }} {{ unit.renter.last_name }}</a>{% else %}-{% endif %}</p>
         </div>
         {% endfor %}
+    </div>
 </div>
-
+    
 {% endblock %}

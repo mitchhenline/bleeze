@@ -3,31 +3,32 @@
 
 {% block body %}
 
-<h1>Tenant Info</h1>
-<a href = "/">Select another store</a>
-<a href="{{ url_for('view_store', store_id=renter.units[0].store_id) }}">Back to Store</a>
-
-
-<div>
-    <h2>{{ renter.first_name }} {{ renter.last_name }}</h2>
-    <h3>Birthday: {{ renter.month_of_birth }} {{ renter.day_of_birth }}, {{ renter.year_of_birth }}</h3>
-    <h3>Address: {{ renter.street_address }} {{ renter.city }}, {{ renter.state }} </h3>
-    <h3>Phone Number: {{ renter.phone_number }}</h3>
-    <h3>Email: ADD EMAIL TO RENTER DB</h3>
+<div class = header>
+    <h1>Tenant Info</h1>
+    <a href = "/">Select another store</a>
+    <a href="{{ url_for('view_store', store_id=renter.units[0].store_id) }}">Back to Store</a>
 </div>
 
-<!-- added section -->
-<h3>Units Rented:</h3>
-    <ul>
-        {% for unit in renter.units %}
-            <li>
-                <a href="{{ url_for('view_unit', store_id=unit.store.id, unit_id=unit.id) }}">
-                    Unit: {{ unit.unit_number }}
-                </a>
-            </li>
-        {% endfor %}
-    </ul>
+<div class="main-body">
+    <div>
+        <h2>{{ renter.first_name }} {{ renter.last_name }}</h2>
+        <h3>Birthday: {{ renter.month_of_birth }} {{ renter.day_of_birth }}, {{ renter.year_of_birth }}</h3>
+        <h3>Address: {{ renter.street_address }} {{ renter.city }}, {{ renter.state }} </h3>
+        <h3>Phone Number: {{ renter.phone_number }}</h3>
+        <h3>Email: ADD EMAIL TO RENTER DB</h3>
+    </div>
 
+    <h3>Units Rented:</h3>
+        <ul>
+            {% for unit in renter.units %}
+                <li>
+                    <a href="{{ url_for('view_unit', store_id=unit.store.id, unit_id=unit.id) }}">
+                        Unit: {{ unit.unit_number }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+</div>
 
 
 
