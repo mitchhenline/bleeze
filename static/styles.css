@@ -117,3 +117,16 @@
     transform: translateY(-50%);
     z-index: -1;
 }
+
+/* ----------VIEW UNIT PAGE---------- */
+.main-body {
+    margin-top: 15%;
+}
+
+.unit-details {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    max-width: 80%;
+    margin: 0 auto;
+}
