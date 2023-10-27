@@ -14,9 +14,9 @@
     top: 0; /* Stick it to the top of the viewport */
     left: 0;
     right: 0; /* Make it span the entire width */
-    background-color: #8c25bc90; /* Header background color */
+    background-color: #8c25bc; /* Header background color */
     color: #fff; /* Header text color */
-
+    height: 25%;
     z-index: 2; /* Ensure it's above other elements */
 }
 
@@ -43,7 +43,6 @@
     padding-bottom: 10%;
     border: solid;
     border-width: 1px;
-
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -73,7 +72,7 @@
     position: fixed;
     width: 80%;
     height: 80%;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -20%);
     max-height: 80%; /* Adjust this value as needed to control the maximum height of the box */
@@ -86,7 +85,6 @@
 
 .unit-item {
     display: flex;
-    /* justify-content: space-between; */
     align-items: center;
 }
 
