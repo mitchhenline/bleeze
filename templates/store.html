@@ -25,6 +25,7 @@
             <p>Type: {{ unit.type }}</p>
             <p>Renter: {% if unit.renter %}<a href="/renter/{{ unit.renter.id }}">{{ unit.renter.first_name }} {{ unit.renter.last_name }}</a>{% else %}-{% endif %}</p>
         </div>
+               
         {% endfor %}
     </div>
 </div>
