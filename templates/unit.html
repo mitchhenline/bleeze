@@ -11,14 +11,30 @@
 </div>
 
 <div class="main-body">
-    <div class="unit-details"> <!-- Use the new class for styling -->
+    <div class="details">
         <h2>{{ unit.unit_number }}</h2>
-        <h2>Tenant: {% if unit.renter %}<a href="/renter/{{ unit.renter.id }}">{{ unit.renter.first_name }} {{ unit.renter.last_name }}</a>{% else %}Vacant{% endif %}</h2>
+        <h2>
+            Tenant: 
+            {% if unit.renter %}
+                <a href="/renter/{{ unit.renter.id }}">{{ unit.renter.first_name }} {{ unit.renter.last_name }}</a>
+            {% else %}
+                Vacant
+                {% if unit.rented %}
+                    <!-- Display the tenant form if the unit is vacant but marked as rented -->
+                    <form method="POST" action="/rent_unit/{{ unit.id }}">
+                        {{ form.hidden_tag() }}
+                        {{ form.first_name.label }} {{ form.first_name(size=20) }}
+                        {{ form.last_name.label }} {{ form.last_name(size=20) }}
+                        <!-- ADD OTHER STUFF HERE -->
+                        {{ form.submit() }}
+                    </form>
+                {% endif %}
+            {% endif %}
+        </h2>
         <h2>Status: {% if unit.rented %}Occupied{% else %}Vacant{% endif %}</h2>
         <h2>Size: {{ unit.size }}</h2>
         <h2>Type: {{ unit.type }}</h2>
-        <h2>Digital Access: {% if unit.digital_access %}Yes{% else %}No{% endif %}</h2> 
+        <h2>Digital Access: {% if unit.digital_access %}Yes{% else %}No{% endif %}</h2>
     </div>
 </div>
-
 {% endblock %}

@@ -118,12 +118,12 @@
     z-index: -1;
 }
 
-/* ----------VIEW UNIT PAGE---------- */
+/* ----------VIEW UNIT & RENTER PAGES---------- */
 .main-body {
     margin-top: 15%;
 }
 
-.unit-details {
+.details {
     background-color: white;
     padding: 20px;
     border: 1px solid #ccc;
