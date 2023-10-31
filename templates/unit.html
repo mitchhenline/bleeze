@@ -20,14 +20,21 @@
             {% else %}
                 Vacant
                 {% if unit.rented %}
-                    <!-- Display the tenant form if the unit is vacant but marked as rented -->
-                    <form method="POST" action="/rent_unit/{{ unit.id }}">
-                        {{ form.hidden_tag() }}
-                        {{ form.first_name.label }} {{ form.first_name(size=20) }}
-                        {{ form.last_name.label }} {{ form.last_name(size=20) }}
-                        <!-- ADD OTHER STUFF HERE -->
-                        {{ form.submit() }}
-                    </form>
+                <form method="POST" action="/submit">
+                    {{ form.hidden_tag() }}
+                    {{ form.first_name.label }} {{ form.first_name(size=20) }}
+                    {{ form.last_name.label }} {{ form.last_name(size=20) }}    
+                    <label for="{{ form.month_of_birth.id }}">Month of Birth:</label>
+                    <select id="{{ form.month_of_birth.id }}" name="{{ form.month_of_birth.name }}">
+                        {% for choice in form.month_of_birth.choices %}
+                            <option value="{{ choice[0] }}">{{ choice[1] }}</option>
+                        {% endfor %}
+                    </select>
+                    
+                    <br>
+                    
+                    <button type="submit">Submit</button>
+                </form>
                 {% endif %}
             {% endif %}
         </h2>
