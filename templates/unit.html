@@ -20,7 +20,7 @@
             {% else %}
                 Vacant
                 {% if unit.rented %}
-                <form method="POST" action="/submit">
+                <form method="POST" action="/WHAT DOES THIS HAVE TO BE">
                     {{ form.hidden_tag() }}
                     {{ form.first_name.label }} {{ form.first_name(size=20) }}
                     {{ form.last_name.label }} {{ form.last_name(size=20) }}    
@@ -30,7 +30,13 @@
                             <option value="{{ choice[0] }}">{{ choice[1] }}</option>
                         {% endfor %}
                     </select>
-                    
+                    <label for="{{ form.day_of_birth.id }}">Day of Birth:</label>
+                    <select id="{{ form.day_of_birth.id }}" name="{{ form.day_of_birth.name }}">
+                        {% for choice in form.day_of_birth.choices %}
+                            <option value="{{ choice[0] }}">{{ choice[1] }}</option>
+                        {% endfor %}
+                    </select>
+                    {{ form.year_of_birth.label }} {{ form.year_of_birth(size=4) }}
                     <br>
                     
                     <button type="submit">Submit</button>
