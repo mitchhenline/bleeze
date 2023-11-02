@@ -37,7 +37,11 @@
                         {% endfor %}
                     </select>
                     {{ form.year_of_birth.label }} {{ form.year_of_birth(size=4) }}
-                    <br>
+                    {{ form.street_address.label }} {{ form.street_address(size=40) }}
+                    {{ form.city.label }} {{ form.city(size=25) }}
+                    {{ form.state.label }} {{ form.state(size=25) }}
+                    {{ form.zip.label }} {{ form.zip(size=5) }}
+
                     
                     <button type="submit">Submit</button>
                 </form>
