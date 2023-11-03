@@ -64,6 +64,6 @@ class TenantForm(FlaskForm):
     city = StringField('City', [validators.InputRequired()])
     state = StringField('State', [validators.InputRequired()])
     zip = IntegerField('Zip Code', [validators.InputRequired()])
-    # phone_number = StringField('Phone Number', [validators.InputRequired()])
+    phone_number = StringField('Phone Number', [validators.InputRequired()])
     
     submit = SubmitField('Rent Unit')

@@ -45,32 +45,27 @@ def view_unit(store_id, unit_id):
     form = TenantForm(request.form)
 
     if form.validate_on_submit():
-        # Check if the unit is already rented
-        if unit.rented:
-            flash("This unit is already occupied.")
-        else:
-            # Create a new tenant with the submitted information
-            new_tenant = Renter(
-                first_name=form.first_name.data,
-                last_name=form.last_name.data,
-                month_of_birth=form.month_of_birth.data,
-                day_of_birth=form.day_of_birth.data,
-                year_of_birth=form.year_of_birth.data,
-                street_address=form.street_address.data,
-                city=form.city.data,
-                state=form.state.data,
-                zip=form.zip.data,
-                phone_number=form.phone_number.data,
-            )
+        new_tenant = Renter(
+            first_name=form.first_name.data,
+            last_name=form.last_name.data,
+            month_of_birth=form.month_of_birth.data,
+            day_of_birth=form.day_of_birth.data,
+            year_of_birth=form.year_of_birth.data,
+            street_address=form.street_address.data,
+            city=form.city.data,
+            state=form.state.data,
+            zip=form.zip.data,
+            phone_number=form.phone_number.data,
+        )
 
-            # Link the tenant to the unit
-            unit.renter = new_tenant
-            unit.rented = True
-            db.session.add(new_tenant)
-            db.session.commit()
+        # Link the tenant to the unit
+        unit.renter = new_tenant
+        unit.rented = True
+        db.session.add(new_tenant)
+        db.session.commit()
 
-            flash("Unit rented successfully.")
-            return redirect(url_for('view_unit', store_id=store_id, unit_id=unit_id))
+        flash("Unit rented successfully.")
+        return redirect(url_for('view_unit', store_id=store_id, unit_id=unit_id))
 
     return render_template("unit.html", unit=unit, store=store, form=form)
 

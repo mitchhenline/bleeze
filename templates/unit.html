@@ -20,7 +20,8 @@
             {% else %}
                 Vacant
                 {% if unit.rented %}
-                <form method="POST" action="/WHAT DOES THIS HAVE TO BE">
+                <!-- THIS NEXT LINE IS WRONG I THINK -->
+                <form method="POST" action="/<int:store_id>/unit/<int:unit_id>">
                     {{ form.hidden_tag() }}
                     {{ form.first_name.label }} {{ form.first_name(size=20) }}
                     {{ form.last_name.label }} {{ form.last_name(size=20) }}    
@@ -41,6 +42,7 @@
                     {{ form.city.label }} {{ form.city(size=25) }}
                     {{ form.state.label }} {{ form.state(size=25) }}
                     {{ form.zip.label }} {{ form.zip(size=5) }}
+                    {{ form.phone_number.label }} {{ form.phone_number(size=15) }}
 
                     
                     <button type="submit">Submit</button>

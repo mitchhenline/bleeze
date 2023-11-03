@@ -1,3 +1,7 @@
+Look at all three files on both and follow steps, get understanding and make it work
+
+
+
 
 1. customer info page
     -Create "tenant manager page"
