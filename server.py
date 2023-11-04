@@ -36,7 +36,7 @@ def view_store(store_id):
     return render_template("store.html", units = units, store = store)
 
 
-@app.route('/<int:store_id>/unit/<int:unit_id>', methods=["GET", "POST"])
+@app.route('/<int:store_id>/unit/<int:unit_id>')
 def view_unit(store_id, unit_id):
     """View unit details and handle unit renting."""
     unit = crud.get_unit_by_id(unit_id)
@@ -44,6 +44,14 @@ def view_unit(store_id, unit_id):
 
     form = TenantForm(request.form)
 
+    return render_template("unit.html", unit=unit, store=store, form=form)
+
+@app.route('/<int:store_id>/unit/<int:unit_id>', methods = ['POST'])
+def rent_unit(store_id, unit_id):
+    """rent unit"""
+    unit = crud.get_unit_by_id(unit_id)
+    store = crud.get_store_by_id(store_id)
+    form = TenantForm(request.form)
     if form.validate_on_submit():
         new_tenant = Renter(
             first_name=form.first_name.data,
@@ -57,17 +65,15 @@ def view_unit(store_id, unit_id):
             zip=form.zip.data,
             phone_number=form.phone_number.data,
         )
-
-        # Link the tenant to the unit
-        unit.renter = new_tenant
-        unit.rented = True
         db.session.add(new_tenant)
         db.session.commit()
-
         flash("Unit rented successfully.")
-        return redirect(url_for('view_unit', store_id=store_id, unit_id=unit_id))
+        return redirect('/')
+    else:
+        print("this didn't work chump")
+        return redirect('/ewf')
 
-    return render_template("unit.html", unit=unit, store=store, form=form)
+    
 
 @app.route('/retail/<int:store_id>')
 def view_store_retail(store_id):
