@@ -1,4 +1,4 @@
-OK now I need to change the code so that when a unit is rented succesfully it changed the rental status from vacant
+if validate on submit needs to be changed to add unit status to rented = True and connect the renter to the unit
 Fix the seed db.py to match this
 
 1. customer info page
