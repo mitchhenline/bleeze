@@ -46,7 +46,7 @@ def view_unit(store_id, unit_id):
 
     return render_template("unit.html", unit=unit, store=store, form=form)
 
-@app.route('/<int:store_id>/unit/<int:unit_id>', methods = ['POST'])
+@app.route('/<int:store_id>/unit/<int:unit_id>', methods = ['POST', 'PUT'])
 def rent_unit(store_id, unit_id):
     """rent unit"""
     unit = crud.get_unit_by_id(unit_id)
@@ -65,7 +65,9 @@ def rent_unit(store_id, unit_id):
             zip=form.zip.data,
             phone_number=form.phone_number.data,
         )
+        # new_unit_rental = Unit   this needs to be an method change to update
         db.session.add(new_tenant)
+        db.session.add(new_unit_rental)
         db.session.commit()
         flash("Unit rented successfully.")
         return redirect('/')
