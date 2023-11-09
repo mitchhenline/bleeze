@@ -1,6 +1,4 @@
-Last thing I did was update the create unit form to change the unit status to vacant, and 
-it works to create a form, but the bad thing is it also moves the unit to the bottom of the list 
-when the page renders, instead of staying in order. Need to change this so they generate alphabetically
+fix the redirect route
 
 
 

@@ -75,7 +75,8 @@ def rent_unit(store_id, unit_id):
         unit.renter_id = new_tenant.id
         db.session.commit()
         flash("Unit rented successfully.")
-        return redirect('/')
+        return redirect(request.url)
+
     else:
         print("this didn't work chump")
         return redirect('/ewf')
