@@ -30,8 +30,10 @@ def store_select():
 @app.route('/<int:store_id>')
 def view_store(store_id):
     """View store."""
-    units = crud.get_units_by_store_id(store_id)
+    all_units = crud.get_units_by_store_id(store_id)
     store = crud.get_store_by_id(store_id)
+
+    units = sorted(all_units, key=lambda unit: (unit.unit_number, unit.unit_number))
 
     return render_template("store.html", units = units, store = store)
 
