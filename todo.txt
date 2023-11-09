@@ -1,5 +1,9 @@
-if validate on submit needs to be changed to add unit status to rented = True and connect the renter to the unit
-Fix the seed db.py to match this
+Last thing I did was update the create unit form to change the unit status to vacant, and 
+it works to create a form, but the bad thing is it also moves the unit to the bottom of the list 
+when the page renders, instead of staying in order. Need to change this so they generate alphabetically
+
+
+
 
 1. customer info page
     -Create "tenant manager page"

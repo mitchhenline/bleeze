@@ -65,9 +65,12 @@ def rent_unit(store_id, unit_id):
             zip=form.zip.data,
             phone_number=form.phone_number.data,
         )
-        # new_unit_rental = Unit   this needs to be an method change to update
+
         db.session.add(new_tenant)
-        db.session.add(new_unit_rental)
+        db.session.commit()
+
+        unit.rented = True
+        unit.renter_id = new_tenant.id
         db.session.commit()
         flash("Unit rented successfully.")
         return redirect('/')
