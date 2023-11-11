@@ -78,8 +78,8 @@ def rent_unit(store_id, unit_id):
         return redirect(request.url)
 
     else:
-        print("this didn't work chump")
-        return redirect('/ewf')
+        flash("Error reserving unit")
+        return redirect(request.url)
 
     
 
