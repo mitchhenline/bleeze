@@ -1,4 +1,4 @@
-fix the redirect route
+Add java script so move out button makes a "Are you sure" pop up?
 
 
 
@@ -11,4 +11,4 @@ fix the redirect route
     -new customer form
     -select unit
     -drop down list of customers (for now on a special 'rent unit' page)
-        -put linnk to 'rent unit' page in the unit manager page
+        -put link to 'rent unit' page in the unit manager page
