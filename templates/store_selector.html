@@ -9,18 +9,25 @@
 
 <div id="line"></div>
 
-<div id="store_selector_box">
-    <form id="store_selector_form" method="POST" action="/">
+<div id="store-selector-box">
+    <form id="store-selector-form" method="POST" action="/">
         {{ form.csrf_token }}
         <div class="form-group">
             <input type="number" class="form-control" name="store_id" id="store_id" placeholder="{{ form.store_id.label.text }}" value="{{ form.store_id.data }}">
             <button type="submit">Go</button>
         </div>
-        {% for message in get_flashed_messages() %}
-            <h3>{{ message }}</h3>
-        {% endfor %}
     </form>
 </div>
+
+
+{% for message in get_flashed_messages() %}
+<div id="flash-box">
+    <div id="flash-content">
+            <h3>{{ message }}</h3>
+    </div>
+</div>
+{% endfor %}
+
 
 <div id="below-line">
     <!-- Content above the line -->

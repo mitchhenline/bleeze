@@ -86,7 +86,6 @@ def move_out_tenant():
     try:
         unit_id = int(request.form.get("unit_id"))
 
-        # Perform the move-out logic here
         unit = crud.get_unit_by_id(unit_id)
         unit.rented = False
         unit.renter_id = None

@@ -36,7 +36,7 @@
     background: rgb(152, 152, 152);
 }
 
-#store_selector_box {
+#store-selector-box {
     margin-top: 10%;
     width: 30%;
     padding-top: 10%;
@@ -119,6 +119,7 @@
 }
 
 /* ----------VIEW UNIT & RENTER PAGES---------- */
+
 .main-body {
     margin-top: 15%;
 }
@@ -129,4 +130,21 @@
     border: 1px solid #ccc;
     max-width: 80%;
     margin: 0 auto;
+}
+
+/* ----------FLASH BOX---------- */
+
+#flash-box {
+    position: fixed;
+    top: 10%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    background-color: white;
+    padding: 30px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+#flash-content {
+    margin-bottom: 10px;
 }

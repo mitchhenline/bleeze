@@ -1,4 +1,4 @@
-Add java script so move out button makes a "Are you sure" pop up?
+fix flash messages and where they show up
 
 
 
