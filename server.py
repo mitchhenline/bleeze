@@ -81,7 +81,24 @@ def rent_unit(store_id, unit_id):
         flash("Error reserving unit")
         return redirect(request.url)
 
-    
+@app.route('/move_out_route', methods=["POST"])
+def move_out_tenant():
+    try:
+        unit_id = int(request.form.get("unit_id"))
+
+        # Perform the move-out logic here
+        unit = crud.get_unit_by_id(unit_id)
+        unit.rented = False
+        unit.renter_id = None
+        db.session.commit()
+
+        flash("Tenant moved out successfully.")
+        return redirect(request.referrer)
+
+    except Exception as e:
+        print("Error moving out tenant:", e)
+        flash("Failed to move out tenant.")
+        return redirect(request.referrer)   
 
 @app.route('/retail/<int:store_id>')
 def view_store_retail(store_id):

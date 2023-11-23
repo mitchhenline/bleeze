@@ -58,6 +58,12 @@
         <h2>Digital Access: {% if unit.digital_access %}Yes{% else %}No{% endif %}</h2>
         {% if unit.renter %}
             <button onclick="confirmMoveOut()">Move out tenant</button>
+
+            <form id="moveOutForm" method="POST" action="/move_out_route" style="display: none;">
+                <input type="hidden" name="unit_id" value="{{ unit.id }}">
+                <button type="submit"></button>
+            </form>
+            
         {% endif %}
     </div>
 </div>
@@ -66,10 +72,7 @@
     function confirmMoveOut() {
         var confirmMoveOut = confirm("Are you sure you want to move out the tenant?");
         if (confirmMoveOut) {
-            // If user clicks OK, you can proceed with the move-out action
-            // You may want to make an AJAX request to the server to handle the move-out logic
-            // For simplicity, let's assume you want to redirect to a URL on OK
-            window.location.href = "/move_out_route"; // Replace with your actual route
+            document.getElementById('moveOutForm').submit();
         } else {
             // If user clicks Cancel, do nothing or provide additional feedback
         }
