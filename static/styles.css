@@ -1,7 +1,10 @@
 
 /* ----------------BASE------------------- */
-#body {
-    background: rgba(185, 28, 193, 0.578);
+.standard-back {
+    height: 100vh;
+    background: linear-gradient(to bottom, #333333 25%, #b7b7b7 25%);
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -22,19 +25,10 @@
 
 .body {
     padding: 20px;
-    
 }
-
 
 /* ----------STORE SELECTOR PAGE---------- */
 
-#above-line {
-    background: rgb(66, 65, 65);
-}
-
-#below-line {
-    background: rgb(152, 152, 152);
-}
 
 #store-selector-box {
     margin-top: 10%;
@@ -51,19 +45,9 @@
     z-index: 1;
 }
 
-#store_selector_form {
+#store-selector-form {
     margin-left: auto;
     margin-right: auto;
-}
-
-#line {
-    width: 100%;
-    height: 1px;
-    background-color: black;
-    position: absolute;
-    top: 30%;
-    transform: translateY(-50%);
-    z-index: -1;
 }
 
 /* ----------STORE PAGE, UNIT SELECTOR---------- */
