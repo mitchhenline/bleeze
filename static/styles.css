@@ -50,22 +50,42 @@
     margin-right: auto;
 }
 
+/* ///////////////////////////////////////////// */
 /* ----------STORE PAGE, UNIT SELECTOR---------- */
+/* ///////////////////////////////////////////// */
+
+
+
+.container {
+    margin: 0;
+    display: flex;
+    height: 100vh;
+}
+
+#sidebar {
+    flex: 1;
+}
 
 #unit_list_div {
     position: fixed;
+    flex: 4;
+    right: 0;
+    bottom: 0;
     width: 80%;
-    height: 80%;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -20%);
-    max-height: 80%; /* Adjust this value as needed to control the maximum height of the box */
+    /* height: 80%; */
+    /* left: 50%; */
+    /* transform: translate(-50%, -20%); */
+    max-height: 95%;
     overflow: auto;
-    background-color: white;
-    border: 1px solid #ccc;
-    padding: 10px;
-    overflow: auto;
+    /* background-color: white; */
+    /* border: 1px solid #ccc; */
+    /* padding: 10px; */
+    /* overflow: auto; */
 }
+
+
+
+
 
 .unit-item {
     display: flex;
@@ -91,6 +111,11 @@
     text-align: center;
     margin: 0;
 }
+
+/* ///////////////////////////////////END OF PAGE//////////////////////////////////////// */
+
+
+
 
 .line {
     width: 100%;
