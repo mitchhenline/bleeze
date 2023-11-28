@@ -64,6 +64,7 @@
 
 #sidebar {
     flex: 1;
+    padding: 10px;
 }
 
 #unit_list_div {
@@ -72,15 +73,8 @@
     right: 0;
     bottom: 0;
     width: 80%;
-    /* height: 80%; */
-    /* left: 50%; */
-    /* transform: translate(-50%, -20%); */
     max-height: 95%;
     overflow: auto;
-    /* background-color: white; */
-    /* border: 1px solid #ccc; */
-    /* padding: 10px; */
-    /* overflow: auto; */
 }
 
 
