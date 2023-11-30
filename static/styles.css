@@ -13,11 +13,11 @@
 /* ----------HEADER AND BODY CLASSES---------- */
 
 .header {
-    position: fixed; /* Fix the header in place */
-    top: 0; /* Stick it to the top of the viewport */
+    position: fixed;
+    top: 0;
     left: 0;
-    right: 0; /* Make it span the entire width */
-    background-color: #8c25bc; /* Header background color */
+    right: 0;
+    background-color: #8c25bc;
     color: #fff; /* Header text color */
     height: 25%;
     z-index: 2; /* Ensure it's above other elements */
@@ -62,9 +62,34 @@
     height: 100vh;
 }
 
-#sidebar {
+.sidebar {
     flex: 1;
+    position: fixed;
+    left: 0;
+    top: 0; /* Fixed position from the top */
+    height: 100vh; /* Set a fixed height for the sidebar */
     padding: 10px;
+    background-color: #8c25bc;
+    color: #f0f0f0;
+    width: 18%;
+}
+
+
+.sidebar-menu-item {
+    border-top: solid;
+    border-bottom: solid;
+    border-color: grey;
+}
+
+.sidebar a.sidebar-menu-item {
+    display: block; /* Make the anchor a block-level element */
+    text-decoration: none; /* Remove underline */
+    color: white; /* Set the text color */
+    padding: 10px; /* Add padding for better clickability */
+}
+
+.sidebar a.sidebar-menu-item:hover {
+    background-color: #333; /* Add a background color on hover */
 }
 
 #unit_list_div {
@@ -77,8 +102,10 @@
     overflow: auto;
 }
 
-
-
+#unit_list_div a {
+    color: #8c25bc;
+    text-decoration: none;
+}
 
 
 .unit-item {

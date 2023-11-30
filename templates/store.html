@@ -5,11 +5,20 @@
 
 <div class="container">
     <div class="sidebar">
-        <h1>Store {{ store.id }}</h1>
-        <a href="/">Select another store</a>
-        <a href="/retail/{{ store.id }}">Retail</a>
-        <h2>Bleeze Self Storage</h2>
+        <h2>Bleeze Store {{ store.id }}</h2>
         <h3>{{ store.address }} <br> {{ store.city }}, {{ store.state }}</h3>
+        
+        <a href="/" class="sidebar-menu-item">
+            <div>
+                <h4>Unit Manager</h4>
+            </div>
+        </a>
+        
+        <a href="/retail/{{ store.id }}" class="sidebar-menu-item">
+            <div>
+                <h4>Retail</h4>
+            </div>
+        </a>
     </div>
 
     <div id="unit_list_div">
