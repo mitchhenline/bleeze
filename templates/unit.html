@@ -3,68 +3,87 @@
 
 {% block body %}
 
-<div class="header">
-    <h1>Unit Manager</h1>
-    <a href="/">Select another store</a>
-    <a href="/{{ store.id }}">Back to store</a>
-    <a href="/retail/{{ store.id }}">Retail</a>
-</div>
+<div class="header-bar"></div>
 
-<div class="main-body">
-    <div class="details">
-        <h2>{{ unit.unit_number }}</h2>
-        <h2>
-            Tenant: 
-            {% if unit.renter %}
-                <a href="/renter/{{ unit.renter.id }}">{{ unit.renter.first_name }} {{ unit.renter.last_name }}</a>
-            {% else %}
-                Vacant
-                {% if unit.rented == False %}
+<div class="container">
+    <div class="sidebar">
+        <div id="sidebar-menu-title">
+            <h2>{{ unit.unit_number }}</h2>
+        </div>
 
+        <a href="/{{ store.id }}" class="sidebar-menu-item">
+            <div>
+                <h4>Unit Selector</h4>
+            </div>
+        </a>
+        
+        <a href="/" class="sidebar-menu-item">
+            <div>
+                <h4>Store Selector</h4>
+            </div>
+        </a>
+        
+        <a href="/retail/{{ store.id }}" class="sidebar-menu-item">
+            <div>
+                <h4>Retail</h4>
+            </div>
+        </a>
+    </div>
 
-                
-                <form method="POST" action="/{{ store.id }}/unit/{{ unit.id }}">
-                    {{ form.first_name.label }} {{ form.first_name(size=20) }}
-                    {{ form.last_name.label }} {{ form.last_name(size=20) }}    
-                    <label for="{{ form.month_of_birth.id }}">Month of Birth:</label>
-                    <select id="{{ form.month_of_birth.id }}" name="{{ form.month_of_birth.name }}">
-                        {% for choice in form.month_of_birth.choices %}
-                        <option value="{{ choice[0] }}">{{ choice[1] }}</option>
-                        {% endfor %}
-                    </select>
-                    <label for="{{ form.day_of_birth.id }}">Day of Birth:</label>
-                    <select id="{{ form.day_of_birth.id }}" name="{{ form.day_of_birth.name }}">
-                        {% for choice in form.day_of_birth.choices %}
-                        <option value="{{ choice[0] }}">{{ choice[1] }}</option>
-                        {% endfor %}
-                    </select>
-                    {{ form.year_of_birth.label }} {{ form.year_of_birth(size=4) }}
-                    {{ form.street_address.label }} {{ form.street_address(size=40) }}
-                    {{ form.city.label }} {{ form.city(size=25) }}
-                    {{ form.state.label }} {{ form.state(size=25) }}
-                    {{ form.zip.label }} {{ form.zip(size=5) }}
-                    {{ form.phone_number.label }} {{ form.phone_number(size=15) }}
-                    {{ form.csrf_token() }}
+    <div id="view-unit-div">
+        <div class="details">
+            <h2>{{ unit.unit_number }}</h2>
+            <h2>
+                Tenant: 
+                {% if unit.renter %}
+                    <a href="/renter/{{ unit.renter.id }}">{{ unit.renter.first_name }} {{ unit.renter.last_name }}</a>
+                {% else %}
+                    Vacant
+                    {% if unit.rented == False %}
                     
-                    
-                    <button type="submit">Rent Unit</button>
-                </form>
+                    <form method="POST" action="/{{ store.id }}/unit/{{ unit.id }}">
+                        {{ form.first_name.label }} {{ form.first_name(size=20) }}
+                        {{ form.last_name.label }} {{ form.last_name(size=20) }}    
+                        <label for="{{ form.month_of_birth.id }}">Month of Birth:</label>
+                        <select id="{{ form.month_of_birth.id }}" name="{{ form.month_of_birth.name }}">
+                            {% for choice in form.month_of_birth.choices %}
+                            <option value="{{ choice[0] }}">{{ choice[1] }}</option>
+                            {% endfor %}
+                        </select>
+                        <label for="{{ form.day_of_birth.id }}">Day of Birth:</label>
+                        <select id="{{ form.day_of_birth.id }}" name="{{ form.day_of_birth.name }}">
+                            {% for choice in form.day_of_birth.choices %}
+                            <option value="{{ choice[0] }}">{{ choice[1] }}</option>
+                            {% endfor %}
+                        </select>
+                        {{ form.year_of_birth.label }} {{ form.year_of_birth(size=4) }}
+                        {{ form.street_address.label }} {{ form.street_address(size=40) }}
+                        {{ form.city.label }} {{ form.city(size=25) }}
+                        {{ form.state.label }} {{ form.state(size=25) }}
+                        {{ form.zip.label }} {{ form.zip(size=5) }}
+                        {{ form.phone_number.label }} {{ form.phone_number(size=15) }}
+                        {{ form.csrf_token() }}
+                        
+                        
+                        <button type="submit">Rent Unit</button>
+                    </form>
+                    {% endif %}
                 {% endif %}
-            {% endif %}
-        </h2>
-        <h2>Status: {% if unit.rented %}Occupied{% else %}Vacant{% endif %}</h2>
-        <h2>Size: {{ unit.size }}</h2>
-        <h2>Type: {{ unit.type }}</h2>
-        <h2>Digital Access: {% if unit.digital_access %}Yes{% else %}No{% endif %}</h2>
-        {% if unit.renter %}
-            <button onclick="confirmMoveOut()">Move out tenant</button>
+            </h2>
+            <h2>Status: {% if unit.rented %}Occupied{% else %}Vacant{% endif %}</h2>
+            <h2>Size: {{ unit.size }}</h2>
+            <h2>Type: {{ unit.type }}</h2>
+            <h2>Digital Access: {% if unit.digital_access %}Yes{% else %}No{% endif %}</h2>
+            {% if unit.renter %}
+                <button onclick="confirmMoveOut()">Move out tenant</button>
 
-            <form id="moveOutForm" method="POST" action="/move_out_route" style="display: none;">
-                <input type="hidden" name="unit_id" value="{{ unit.id }}">
-                <button type="submit"></button>
-            </form>
-            
-        {% endif %}
+                <form id="moveOutForm" method="POST" action="/move_out_route" style="display: none;">
+                    <input type="hidden" name="unit_id" value="{{ unit.id }}">
+                    <button type="submit"></button>
+                </form>
+
+            {% endif %}
+        </div>
     </div>
 </div>
 

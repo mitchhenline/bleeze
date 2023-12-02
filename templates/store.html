@@ -7,9 +7,17 @@
 
 <div class="container">
     <div class="sidebar">
-        <h2>Bleeze Store {{ store.id }}</h2>
-        <h3>{{ store.address }} <br> {{ store.city }}, {{ store.state }}</h3>
-        
+        <div id="sidebar-menu-title">
+            <h2>Bleeze Store {{ store.id }}</h2>
+            <h3>{{ store.address }} <br> {{ store.city }}, {{ store.state }}</h3>
+        </div>
+
+        <a href="/{{ store.id }}" class="sidebar-menu-item">
+            <div>
+                <h4>Unit Selector</h4>
+            </div>
+        </a>
+
         <a href="/" class="sidebar-menu-item">
             <div>
                 <h4>Store Selector</h4>

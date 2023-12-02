@@ -84,6 +84,14 @@
     border-top: solid;
     border-bottom: solid;
     border-color: grey;
+    height: 17%;
+}
+
+#sidebar-menu-title {
+    border-top: solid;
+    border-bottom: solid;
+    border-color: grey;
+    height: 17%;
 }
 
 .sidebar a.sidebar-menu-item {
@@ -140,7 +148,20 @@
 
 /* ///////////////////////////////////END OF PAGE//////////////////////////////////////// */
 
+#view-unit-div {
+    position: fixed;
+    flex: 4;
+    right: 0;
+    top: 5%;
+    width: 80%;
+    max-height: 95%;
+    overflow: auto;
+}
 
+#view-unit-div a {
+    color: #8c25bc;
+    text-decoration: none;
+}
 
 
 .line {
@@ -164,7 +185,6 @@
     padding: 20px;
     border: 1px solid #ccc;
     max-width: 80%;
-    margin: 0 auto;
 }
 
 /* ----------FLASH BOX---------- */
