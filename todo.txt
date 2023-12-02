@@ -1,5 +1,6 @@
-fix flash messages and where they show up
-
+-apply styling to customer pages
+-add sidebar items for view customer list page
+-add customer list page
 
 
 
@@ -12,3 +13,4 @@ fix flash messages and where they show up
     -select unit
     -drop down list of customers (for now on a special 'rent unit' page)
         -put link to 'rent unit' page in the unit manager page
+fix flash messages and where they show up

@@ -3,30 +3,51 @@
 
 {% block body %}
 
-<div class="header">
-    <h1>Bleeze Retail</h1>
-    <a href = "/">Select another store</a>
-    <a href = "/{{ store.id }}">Back to Store</a>
-</div>
+<div class="header-bar"></div>
 
-<div class="main-body">
+<div class="container">
+    <div class="sidebar">
+        <div id="sidebar-menu-title">
+            <h2>Bleeze Store {{ store.id }}</h2>
+            <h3>{{ store.address }} <br> {{ store.city }}, {{ store.state }}</h3>
+        </div>
 
-    <div id="retail_list_div">
-        <h2>Retail items</h2>
-        <table>
-            <tr>
-                <th>Item name</th>
-                <th>Price</th>
-                <th>Quantity</th>
-            </tr>
+        <a href="/{{ store.id }}" class="sidebar-menu-item">
+            <div>
+                <h4>Unit Selector</h4>
+            </div>
+        </a>
+
+        <a href="/" class="sidebar-menu-item">
+            <div>
+                <h4>Store Selector</h4>
+            </div>
+        </a>
+        
+        <a href="/retail/{{ store.id }}" class="sidebar-menu-item">
+            <div>
+                <h4>Retail</h4>
+            </div>
+        </a>
+    </div>
+    <div class="main-body">
+        <div id="unit_list_div">  
+            <!-- change to retail-list-div and edit styling -->
+            <h2>Retail items</h2>
             {% for retail in retail %}
-            <tr>
-                <td>{{ retail.item_name }}</td>
-                <td>{{ retail.price }}</td>
-                <td>{{ retail.quantity }}</td>
-            </tr>
+            <table>
+                <tr>
+                    <th>Item name</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                </tr>
+                <tr>
+                    <td>{{ retail.item_name }}</td>
+                    <td>{{ retail.price }}</td>
+                    <td>{{ retail.quantity }}</td>
+                </tr>
             {% endfor %}
-        </table>
+        </div>
     </div>
 </div>
     
