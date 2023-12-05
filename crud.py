@@ -5,6 +5,9 @@ from model import db, connect_to_db, Store, Renter, Unit, Retail
 def get_units_by_store_id(store_id):
     return Unit.query.filter(Unit.store_id == store_id).all()
 
+def get_renters_by_store_id(store_id):
+    return Renter.query.filter(Renter.store_id == store_id).all()
+
 def get_store_by_id(store_id):
     return Store.query.filter(Store.id == store_id).first()
 

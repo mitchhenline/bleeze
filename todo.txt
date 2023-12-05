@@ -1,3 +1,6 @@
+
+the model is messed up because the renters aren't tied to stores
+
 -apply styling to customer pages
 -add sidebar items for view customer list page
 -add customer list page
