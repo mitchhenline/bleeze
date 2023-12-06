@@ -8,7 +8,7 @@
 <div class="container">
     <div class="sidebar">
         <div id="sidebar-menu-title">
-            <h2>Bleeze Store {{ store.id }}</h2>
+            <h2>All Bleeze Renters</h2>
             <h3>{{ store.address }} <br> {{ store.city }}, {{ store.state }}</h3>
         </div>
 
@@ -24,7 +24,7 @@
             </div>
         </a>
         
-        <a href="/{{ store.id }}/renters" class="sidebar-menu-item">
+        <a href="/renters" class="sidebar-menu-item">
             <div>
                 <h4>Renter List</h4>
             </div>
@@ -40,7 +40,9 @@
     </div>
 
     <div id="renter-list-div">
-        
+        {% for renter in renters %}
+            <h3>{{ renter.first_name }}</h3>
+        {% endfor %}
     </div>
 
 </div>

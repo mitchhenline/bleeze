@@ -5,7 +5,7 @@ the model is messed up because the renters aren't tied to stores
 -add sidebar items for view customer list page
 -add customer list page
 
-
+-make sidebar dark grey for whatever one is selected
 
 1. customer info page
     -Create "tenant manager page"

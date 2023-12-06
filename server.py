@@ -37,15 +37,15 @@ def view_store(store_id):
 
     return render_template("store.html", units = units, store = store)
 
-@app.route('/<int:store_id>/renters')
+@app.route('/renters')
 def view_renters(store_id):
     """View renters."""
-    renters = crud.get_renters_by_store_id(store_id)
+    renters = crud.get_renters()
     store = crud.get_store_by_id(store_id)
+    
+    sorted_renters = sorted(renters, key=lambda renter: renter.first_name)
 
-    # units = sorted(all_units, key=lambda unit: (unit.unit_number, unit.unit_number))
-
-    return render_template("renters.html", renters = renters, store = store)
+    return render_template("renters.html", renters = sorted_renters, store = store)
 
 @app.route('/<int:store_id>/unit/<int:unit_id>')
 def view_unit(store_id, unit_id):
