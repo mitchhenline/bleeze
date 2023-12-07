@@ -37,7 +37,7 @@ def view_store(store_id):
 
     return render_template("store.html", units = units, store = store)
 
-@app.route('/renters')
+@app.route('/<int:store_id>/renters')
 def view_renters(store_id):
     """View renters."""
     renters = crud.get_renters()
