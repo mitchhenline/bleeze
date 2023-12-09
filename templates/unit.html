@@ -16,13 +16,14 @@
                 <h4>Unit Selector</h4>
             </div>
         </a>
-        
-        <a href="/" class="sidebar-menu-item">
+
+        <a href="javascript:void(0);" onclick="openStoreSelectorPopup()" class="sidebar-menu-item">
             <div>
                 <h4>Store Selector</h4>
             </div>
         </a>
         
+
         <a href="/{{ store.id }}/renters" class="sidebar-menu-item">
             <div>
                 <h4>Renter List</h4>
@@ -103,6 +104,15 @@
             // If user clicks Cancel, do nothing or provide additional feedback
         }
     }
+
+    function openStoreSelectorPopup() {
+        console.log("wahoo")
+        
+    }
 </script>
+
+
+
+
 
 {% endblock %}
