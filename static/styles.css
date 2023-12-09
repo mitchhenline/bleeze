@@ -55,6 +55,29 @@
     margin-right: auto;
 }
 
+#store-selector-box-js {
+    display: none;
+    margin-top: 10%;
+    width: 30%;
+    height: 15%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    border: solid;
+    border-width: 1px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    position: relative;
+    z-index: 1;
+}
+
+#store-selector-box-js-close-button {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+}
+
+
 /* ///////////////////////////////////////////// */
 /* ----------STORE PAGE, UNIT SELECTOR---------- */
 /* ///////////////////////////////////////////// */
