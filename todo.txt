@@ -1,5 +1,5 @@
 
-only some of the customers render,
+Change store selector a js popup
 
 -apply styling to customer pages
 -add sidebar items for view customer list page

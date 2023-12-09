@@ -108,7 +108,7 @@ def move_out_tenant():
         flash("Failed to move out tenant.")
         return redirect(request.referrer)   
 
-@app.route('/retail/<int:store_id>')
+@app.route('/<int:store_id>/retail')
 def view_store_retail(store_id):
     """View store retail."""
     retail = crud.get_retail_by_store_id(store_id)
