@@ -1,5 +1,5 @@
 
-the model is messed up because the renters aren't tied to stores
+only some of the customers render,
 
 -apply styling to customer pages
 -add sidebar items for view customer list page
