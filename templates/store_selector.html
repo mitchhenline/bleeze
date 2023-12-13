@@ -2,6 +2,7 @@
 {% block title %}Select Store{% endblock %}
 
 {% block body %}
+
 <body class="standard-back">
     
     <div id="store-selector-box">
@@ -13,17 +14,7 @@
             </div>
         </form>
     </div>
-    
-    
-    {% for message in get_flashed_messages() %}
-    <div id="flash-box">
-        <div id="flash-content">
-            <h3>{{ message }}</h3>
-        </div>
-    </div>
-    {% endfor %}
 
 </body>
-    
-    
-    {% endblock %}
+
+{% endblock %}

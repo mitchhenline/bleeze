@@ -1,5 +1,5 @@
 
-Change store selector a js popup
+Change store selector a js popup, do for all pages
 
 -apply styling to customer pages
 -add sidebar items for view customer list page
