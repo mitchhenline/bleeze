@@ -20,7 +20,7 @@ def store_select():
 
         if crud.is_valid_store(store_id):
             session['store_id'] = store_id
-            return redirect(url_for('view_store', store_id=store_id))
+            return redirect(url_for('view_store_dashboard', store_id=store_id))
 
         else:
             flash("Invalid store number. Please try again.")
