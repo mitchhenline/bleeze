@@ -3,7 +3,13 @@
 
 {% block body %}
 
-<div class="header-bar"></div>
+<div class="header-bar">
+    <a href="javascript:void(0);" onclick="openStoreSelectorPopup()" id="header-store-selector-link">
+        <div>
+            <h4>Store Selector</h4>
+        </div>
+    </a>
+</div>
 
 <div class="container">
     <div class="sidebar">
@@ -15,12 +21,6 @@
         <a href="/{{ store.id }}" class="sidebar-menu-item">
             <div>
                 <h4>Unit Selector</h4>
-            </div>
-        </a>
-
-        <a href="/" class="sidebar-menu-item">
-            <div>
-                <h4>Store Selector</h4>
             </div>
         </a>
 
@@ -50,6 +50,24 @@
         {% endfor %}
     </div>
 
+    <div id="store-selector-box-js">
+        <h2><a href="javascript:void(0);" onclick="closeStoreSelectorPopup()" id="store-selector-box-js-close-button">X</a></h2>
+    </div>
+
 </div>
+
+
+<script>
+
+    function openStoreSelectorPopup() {
+        let storeSelectorBox = document.getElementById('store-selector-box-js')
+        storeSelectorBox.style.display = 'block'
+    }
+
+    function closeStoreSelectorPopup() {
+        let storeSelectorBox = document.getElementById('store-selector-box-js');
+        storeSelectorBox.style.display = 'none';
+    }
+</script>
     
 {% endblock %}

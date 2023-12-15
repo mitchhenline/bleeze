@@ -1,39 +1,13 @@
+/* ------------------------------------------------- */
+/* ----------------STORE SELECTOR------------------- */
+/* ------------------------------------------------- */
 
-/* ----------------BASE------------------- */
 .standard-back {
     height: 100vh;
     background: linear-gradient(to bottom, #333333 25%, #b7b7b7 25%);
     margin: 0;
     padding: 0;
 }
-
-
-
-
-/* ----------HEADER AND BODY CLASSES---------- */
-
-.header-bar {
-    height: 5%;
-    background-color: #0c080e;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
-}
-
-.header {
-    position: fixed;
-    top: 5%;
-    left: 0;
-    right: 0;
-    color: #fff; /* Header text color */
-    height: 20%;
-    z-index: 2; /* Ensure it's above other elements */
-}
-
-/* ----------STORE SELECTOR PAGE---------- */
-
 
 #store-selector-box {
     margin-top: 10%;
@@ -54,6 +28,10 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+/* ----------------------------------------- */
+/* -------STORE SELECTOR JAVASCRIPT--------- */
+/* ----------------------------------------- */
 
 #store-selector-box-js {
     display: none;
@@ -77,12 +55,33 @@
     right: 2px;
 }
 
+/* ----------------------------------------- */
+/* -----------------HEADER------------------ */
+/* ----------------------------------------- */
+
+
+.header-bar {
+    height: 5%;
+    background-color: #0c080e;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+}
+
+#header-store-selector-link {
+    text-decoration: none;
+    color: white;
+    position: absolute;
+    right: 5%;
+}
 
 /* ///////////////////////////////////////////// */
-/* ----------STORE PAGE, UNIT SELECTOR---------- */
+/* -------------MAIN PAGE LAYOUT---------------- */
 /* ///////////////////////////////////////////// */
-
-
 
 .container {
     margin: 0;
@@ -94,34 +93,26 @@
     flex: 1;
     position: fixed;
     left: 0;
-    top: 5%; /* Fixed position from the top */
-    height: 100vh; /* Set a fixed height for the sidebar */
-    padding: 10px;
+    top: 5%;
+    height: 100vh;
     background-color: #8c25bc;
     color: #f0f0f0;
     width: 18%;
 }
 
-
 .sidebar-menu-item {
-    border-top: solid;
-    border-bottom: solid;
-    border-color: grey;
-    height: 17%;
+    height: 12%;
 }
 
 #sidebar-menu-title {
-    border-top: solid;
-    border-bottom: solid;
-    border-color: grey;
     height: 17%;
 }
 
 .sidebar a.sidebar-menu-item {
-    display: block; /* Make the anchor a block-level element */
-    text-decoration: none; /* Remove underline */
-    color: white; /* Set the text color */
-    padding: 10px; /* Add padding for better clickability */
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
 }
 
 .sidebar a.sidebar-menu-item:hover {
