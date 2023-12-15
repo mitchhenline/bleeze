@@ -30,9 +30,24 @@
             {% endfor %}
         </ul>
     </div>
+    
+    <div id="store-selector-box-js">
+        <h2><a href="javascript:void(0);" onclick="closeStoreSelectorPopup()" id="store-selector-box-js-close-button">X</a></h2>
+    </div>
+    
 </div>
 
+<script>
 
+    function openStoreSelectorPopup() {
+        let storeSelectorBox = document.getElementById('store-selector-box-js')
+        storeSelectorBox.style.display = 'block'
+    }
 
+    function closeStoreSelectorPopup() {
+        let storeSelectorBox = document.getElementById('store-selector-box-js');
+        storeSelectorBox.style.display = 'none';
+    }
+</script>
 
 {% endblock %}
