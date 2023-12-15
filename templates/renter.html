@@ -11,30 +11,57 @@
     </a>
 </div>
 
-<div class="main-body">
-    <div class="details">
-        <h2>{{ renter.first_name }} {{ renter.last_name }}</h2>
-        <h3>Birthday: {{ renter.month_of_birth }} {{ renter.day_of_birth }}, {{ renter.year_of_birth }}</h3>
-        <h3>Address: {{ renter.street_address }} {{ renter.city }}, {{ renter.state }} </h3>
-        <h3>Phone Number: {{ renter.phone_number }}</h3>
-        <h3>Email: ADD EMAIL TO RENTER DB</h3>
+<div class="container">
+        <div class="sidebar">
+            <div id="sidebar-menu-title">
+                <h2>{{ renter.first_name }} {{ renter.last_name }}</h2>
+            </div>
+    
+            <a href="/{{ store.id }}" class="sidebar-menu-item">
+                <div>
+                    <h4>Unit Selector</h4>
+                </div>
+            </a>
+    
+            <a href="/{{ store.id }}/renters" class="sidebar-menu-item">
+                <div>
+                    <h4>Renter List</h4>
+                </div>
+            </a>
+            
+            <a href="/{{ store.id }}/retail" class="sidebar-menu-item">
+                <div>
+                    <h4>Retail</h4>
+                </div>
+            </a>
+        </div>
+        <div id="view-unit-div">
+            <div class="details">
+                <h2>{{ renter.first_name }} {{ renter.last_name }}</h2>
+                <h3>Birthday: {{ renter.month_of_birth }} {{ renter.day_of_birth }}, {{ renter.year_of_birth }}</h3>
+                <h3>Address: {{ renter.street_address }} {{ renter.city }}, {{ renter.state }} </h3>
+                <h3>Phone Number: {{ renter.phone_number }}</h3>
+                <h3>Email: ADD EMAIL TO RENTER DB</h3>
+                
+                <h3>Units Rented:</h3>
+                <ul>
+                    {% for unit in renter.units %}
+                    <li>
+                        <a href="{{ url_for('view_unit', store_id=unit.store.id, unit_id=unit.id) }}">
+                            Unit: {{ unit.unit_number }}
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
         
-        <h3>Units Rented:</h3>
-        <ul>
-            {% for unit in renter.units %}
-            <li>
-                <a href="{{ url_for('view_unit', store_id=unit.store.id, unit_id=unit.id) }}">
-                    Unit: {{ unit.unit_number }}
-                </a>
-            </li>
-            {% endfor %}
-        </ul>
+        <div id="store-selector-box-js">
+            <h2><a href="javascript:void(0);" onclick="closeStoreSelectorPopup()" id="store-selector-box-js-close-button">X</a></h2>
+        </div>
+        
     </div>
-    
-    <div id="store-selector-box-js">
-        <h2><a href="javascript:void(0);" onclick="closeStoreSelectorPopup()" id="store-selector-box-js-close-button">X</a></h2>
-    </div>
-    
+
 </div>
 
 <script>

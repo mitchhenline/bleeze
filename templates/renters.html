@@ -41,7 +41,7 @@
 
     <div id="renter-list-div">
         {% for renter in renters %}
-            <a href="/renter/{{ renter.id }}"><h3>{{ renter.first_name }} {{ renter.last_name }}</h3></a>
+            <a href="/{{ store.id }}/renters/{{ renter.id }}"><h3>{{ renter.first_name }} {{ renter.last_name }}</h3></a>
             
         {% endfor %}
     </div>

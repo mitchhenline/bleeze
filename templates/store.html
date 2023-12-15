@@ -45,7 +45,7 @@
             </a>
             <p>Status: {% if unit.rented %}Occupied{% else %}Vacant{% endif %}</p>
             <p>Type: {{ unit.type }}</p>
-            <p>Renter: {% if unit.renter %}<a href="/renter/{{ unit.renter.id }}">{{ unit.renter.first_name }} {{ unit.renter.last_name }}</a>{% else %}-{% endif %}</p>
+            <p>Renter: {% if unit.renter %}<a href="/{{ store.id }}/renters/{{ unit.renter.id }}">{{ unit.renter.first_name }} {{ unit.renter.last_name }}</a>{% else %}-{% endif %}</p>
         </div>
         {% endfor %}
     </div>

@@ -37,16 +37,6 @@ def view_store(store_id):
 
     return render_template("store.html", units = units, store = store)
 
-@app.route('/<int:store_id>/renters')
-def view_renters(store_id):
-    """View renters."""
-    renters = crud.get_renters()
-    store = crud.get_store_by_id(store_id)
-    
-    sorted_renters = sorted(renters, key=lambda renter: renter.first_name)
-
-    return render_template("renters.html", renters = sorted_renters, store = store)
-
 @app.route('/<int:store_id>/unit/<int:unit_id>')
 def view_unit(store_id, unit_id):
     """View unit details and handle unit renting."""
@@ -63,6 +53,7 @@ def rent_unit(store_id, unit_id):
     unit = crud.get_unit_by_id(unit_id)
     store = crud.get_store_by_id(store_id)
     form = TenantForm(request.form)
+    
     if form.validate_on_submit():
         new_tenant = Renter(
             first_name=form.first_name.data,
@@ -124,13 +115,24 @@ def view_retail_unit(store_id, unit_id):
 
     return render_template("unit.html", unit=unit, store=store)
 
-@app.route('/renter/<int:renter_id>')
-def view_renter(renter_id):
+@app.route('/<int:store_id>/renters')
+def view_renters(store_id):
+    """View renters."""
+    renters = crud.get_renters()
+    store = crud.get_store_by_id(store_id)
+    
+    sorted_renters = sorted(renters, key=lambda renter: renter.first_name)
+
+    return render_template("renters.html", renters = sorted_renters, store = store)
+
+@app.route('/<int:store_id>/renters/<int:renter_id>')
+def view_renter(store_id, renter_id):
     """View tenant details."""
     renter = crud.get_renter_by_id(renter_id)
     units = crud.get_units_by_renter_id(renter_id)
+    store = crud.get_store_by_id(store_id)
 
-    return render_template("renter.html", renter=renter, units=units)
+    return render_template("renter.html", renter=renter, units=units, store=store)
 
 if __name__ == "__main__":
     connect_to_db(app)

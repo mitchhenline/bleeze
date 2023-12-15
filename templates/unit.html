@@ -35,7 +35,6 @@
                 <h4>Retail</h4>
             </div>
         </a>
-
     </div>
 
     <div id="view-unit-div">
@@ -44,7 +43,7 @@
             <h2>
                 Tenant: 
                 {% if unit.renter %}
-                    <a href="/renter/{{ unit.renter.id }}">{{ unit.renter.first_name }} {{ unit.renter.last_name }}</a>
+                    <a href="/{{ store.id }}/renters/{{ unit.renter.id }}">{{ unit.renter.first_name }} {{ unit.renter.last_name }}</a>
                 {% else %}
                     Vacant
                     {% if unit.rented == False %}
