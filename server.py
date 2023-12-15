@@ -28,6 +28,13 @@ def store_select():
     return render_template("store_selector.html", form=form)
 
 @app.route('/<int:store_id>')
+def view_store_dashboard(store_id):
+    """View dashboard."""
+    store = crud.get_store_by_id(store_id)
+
+    return render_template("dashboard.html", store = store)
+
+@app.route('/<int:store_id>/unitselector')
 def view_store(store_id):
     """View store."""
     all_units = crud.get_units_by_store_id(store_id)
@@ -53,7 +60,7 @@ def rent_unit(store_id, unit_id):
     unit = crud.get_unit_by_id(unit_id)
     store = crud.get_store_by_id(store_id)
     form = TenantForm(request.form)
-    
+
     if form.validate_on_submit():
         new_tenant = Renter(
             first_name=form.first_name.data,
