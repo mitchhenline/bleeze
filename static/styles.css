@@ -106,6 +106,19 @@
     align-items: center;
     justify-content: center;
     margin: auto;
+    text-decoration: none;
+    color: white;
+}
+
+.sidebar-menu-item-selected {
+    height: 12%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    background-color:#ac42de;
+    text-decoration: none;
+    color: white;
 }
 
 
@@ -117,12 +130,6 @@
     margin: auto;
 }
 
-.sidebar a.sidebar-menu-item {
-    display: block;
-    text-decoration: none;
-    color: white;
-    padding: 10px;
-}
 
 .sidebar a.sidebar-menu-item:hover {
     background-color: #333; /* Add a background color on hover */
