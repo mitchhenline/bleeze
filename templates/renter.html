@@ -4,6 +4,9 @@
 {% block body %}
 
 <div class="header-bar">
+    <div class="header-address">
+        <h4>{{ store.address }} {{ store.city }} - {{ store.id }}</h4>
+    </div>
     <a href="javascript:void(0);" onclick="openStoreSelectorPopup()" id="header-store-selector-link">
         <div>
             <h4>Store Selector</h4>

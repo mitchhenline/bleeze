@@ -4,6 +4,9 @@
 {% block body %}
 
 <div class="header-bar">
+    <div class="header-address">
+        <h4>{{ store.address }} {{ store.city }} - {{ store.id }}</h4>
+    </div>
     <a href="javascript:void(0);" onclick="openStoreSelectorPopup()" id="header-store-selector-link">
         <div>
             <h4>Store Selector</h4>
@@ -15,7 +18,6 @@
     <div class="sidebar">
         <div id="sidebar-menu-title">
             <h2>All Bleeze Renters</h2>
-            <h3>{{ store.address }} <br> {{ store.city }}, {{ store.state }}</h3>
         </div>
 
         <a href="/{{ store.id }}" class="sidebar-menu-item">
