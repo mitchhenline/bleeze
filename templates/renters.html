@@ -43,14 +43,22 @@
                 <h4>Retail</h4>
             </div>
         </a>
-
-
     </div>
 
     <div id="renter-list-div">
+        <div class="renter-item even" id="renter-item-header">
+            <h3 id = "renter-item-c1">Name</h3>
+            <h3 id = "renter-item-c2">Address</h3>
+            <h3 id = "renter-item-c3">Phone</h3>
+            <h3 id = "renter-item-c4">Current Renter</h3>
+        </div>
         {% for renter in renters %}
-            <a href="/{{ store.id }}/renters/{{ renter.id }}"><h3>{{ renter.first_name }} {{ renter.last_name }}</h3></a>
-            
+        <div class="renter-item {% if loop.index is divisibleby(2) %}even{% else %}odd{% endif %}">
+            <p id = "renter-item-c1"><a href="/{{ store.id }}/renters/{{ renter.id }}">{{ renter.first_name }} {{ renter.last_name }}</a></p>
+            <p id = "renter-item-c2">{{ renter.city }}</p>
+            <p id = "renter-item-c3">{{ renter.phone_number }}</p>
+            <p id = "renter-item-c4">Current Renter?</p>
+        </div>
         {% endfor %}
     </div>
 

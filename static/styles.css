@@ -138,17 +138,7 @@
 
 
 .sidebar a.sidebar-menu-item:hover {
-    background-color: #333; /* Add a background color on hover */
-}
-
-#renter-list-div {
-    position: fixed;
-    flex: 4;
-    right: 0;
-    bottom: 0;
-    width: 80%;
-    max-height: 96%;
-    overflow: auto;
+    background-color: #333;
 }
 
 
@@ -163,7 +153,74 @@
 }
 
 /*//////////////////////////////////////////////////////*/
-/*////////////////// UNIT LIST DIV /////////////////////*/
+/*////////////////// VIEW RENTER PAGE ///////////////////*/
+/*//////////////////////////////////////////////////////*/
+
+#renter-list-div {
+    position: fixed;
+    flex: 4;
+    right: 0;
+    bottom: 0;
+    width: 88%;
+    max-height: 96%;
+    overflow: auto;
+}
+
+#renter-list-div a {
+    color: #8c25bc;
+    text-decoration: none;
+}
+
+.renter-item {
+    display: flex;
+    align-items: center;
+    padding: 2%;
+}
+
+.renter-item a {
+    text-decoration: none;
+}
+
+.renter-item p {
+    flex: 1;
+    text-align: center;
+    margin: 0;
+}
+.renter-item.even {
+    background-color: #f0f0f0;
+}
+
+.renter-item.odd {
+    background-color: white;
+}
+
+#renter-item-c1 {
+    position: absolute;
+    left: 10%;
+}
+#renter-item-c2 {
+    position: absolute;
+    left: 25%;
+}
+#renter-item-c3 {
+    position: absolute;
+    left: 40%;
+}
+#renter-item-c4 {
+    position: absolute;
+    left: 55%;
+}
+
+#renter-item-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom-color: #ac42de;
+    border-bottom: solid;
+}
+
+/*//////////////////////////////////////////////////////*/
+/*////////////////// VIEW STORE PAGE ///////////////////*/
 /*//////////////////////////////////////////////////////*/
 
 #unit_list_div {
@@ -206,24 +263,31 @@
 
 #unit-item-c1 {
     position: absolute;
-    left: 11%;
+    left: 10%;
 }
 #unit-item-c2 {
     position: absolute;
-    left: 30%;
+    left: 25%;
 }
 #unit-item-c3 {
     position: absolute;
-    left: 50%;
+    left: 40%;
 }
 #unit-item-c4 {
     position: absolute;
-    left: 71%;
+    left: 55%;
 }
+#unit-item-c5 {
+    position: absolute;
+    left: 70%;
+}
+
 #unit-item-header {
     position: sticky;
     top: 0;
     z-index: 100;
+    border-bottom-color: #ac42de;
+    border-bottom: solid;
 }
 
 /* ///////////////////////////////////END OF PAGE//////////////////////////////////////// */
