@@ -49,11 +49,11 @@
         {% for unit in units %}
         <div class="unit-item {% if loop.index is divisibleby(2) %}even{% else %}odd{% endif %}">
             <a href="/{{ store.id }}/unit/{{ unit.id }}">
-                <h4>Unit Number: {{ unit.unit_number }}</h4>
+                <p id = "unit-item-c1">{{ unit.unit_number }}</p>
             </a>
-            <p>Status: {% if unit.rented %}Occupied{% else %}Vacant{% endif %}</p>
-            <p>Type: {{ unit.type }}</p>
-            <p>Renter: {% if unit.renter %}<a href="/{{ store.id }}/renters/{{ unit.renter.id }}">{{ unit.renter.first_name }} {{ unit.renter.last_name }}</a>{% else %}-{% endif %}</p>
+                <p id = "unit-item-c2">{% if unit.rented %}Occupied{% else %}Vacant{% endif %}</p>
+                <p id = "unit-item-c3">{{ unit.type }}</p>
+                <p id = "unit-item-c4">{% if unit.renter %}<a href="/{{ store.id }}/renters/{{ unit.renter.id }}">{{ unit.renter.first_name }} {{ unit.renter.last_name }}</a>{% else %}Vacant{% endif %}</p>
         </div>
         {% endfor %}
     </div>

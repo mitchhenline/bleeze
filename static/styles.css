@@ -151,6 +151,21 @@
     overflow: auto;
 }
 
+
+
+#retail-list-div {
+    position: fixed;
+    flex: 4;
+    right: 0;
+    width: 88%;
+    max-height: 96%;
+    overflow: auto;
+}
+
+/*//////////////////////////////////////////////////////*/
+/*////////////////// UNIT LIST DIV /////////////////////*/
+/*//////////////////////////////////////////////////////*/
+
 #unit_list_div {
     position: fixed;
     flex: 4;
@@ -166,20 +181,21 @@
     text-decoration: none;
 }
 
-#retail-list-div {
-    position: fixed;
-    flex: 4;
-    right: 0;
-    width: 88%;
-    max-height: 96%;
-    overflow: auto;
-}
-
 .unit-item {
     display: flex;
     align-items: center;
+    padding: 2%;
 }
 
+.unit-item a {
+    text-decoration: none;
+}
+
+.unit-item p {
+    flex: 1;
+    text-align: center;
+    margin: 0;
+}
 .unit-item.even {
     background-color: #f0f0f0;
 }
@@ -188,16 +204,21 @@
     background-color: white;
 }
 
-.unit-item a {
-    width: 30%; /* Adjust the width as needed to align with the unit number */
-    display: block;
-    text-decoration: none;
+#unit-item-c1 {
+    position: absolute;
+    left: 11%;
 }
-
-.unit-item p {
-    flex: 1; /* Take up the remaining space */
-    text-align: center;
-    margin: 0;
+#unit-item-c2 {
+    position: absolute;
+    left: 29%;
+}
+#unit-item-c3 {
+    position: absolute;
+    left: 50%;
+}
+#unit-item-c4 {
+    position: absolute;
+    left: 75%;
 }
 
 /* ///////////////////////////////////END OF PAGE//////////////////////////////////////// */
