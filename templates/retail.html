@@ -22,46 +22,42 @@
 
         <a href="/{{ store.id }}" class="sidebar-menu-item">
             <div>
-                <h4>Dashboard</h4>
+                <h4>DASHBOARD</h4>
             </div>
         </a>
 
         <a href="/{{ store.id }}/unitselector" class="sidebar-menu-item">
             <div>
-                <h4>Unit Selector</h4>
+                <h4>UNIT SELECTOR</h4>
             </div>
         </a>
 
         <a href="/{{ store.id }}/renters" class="sidebar-menu-item">
             <div>
-                <h4>Contacts</h4>
+                <h4>CONTACTS</h4>
             </div>
         </a>
         
         <a href="/{{ store.id }}/retail" class="sidebar-menu-item-selected">
             <div>
-                <h4>Retail</h4>
+                <h4>RETAIL</h4>
             </div>
         </a>
     </div>
-    <div class="main-body">
-        <div id="retail-list-div">  
-            <!-- change to retail-list-div and edit styling -->
-            <h2>Retail items</h2>
-            {% for retail in retail %}
-            <table>
-                <tr>
-                    <th>Item name</th>
-                    <th>Price</th>
-                    <th>Quantity</th>
-                </tr>
-                <tr>
-                    <td>{{ retail.item_name }}</td>
-                    <td>{{ retail.price }}</td>
-                    <td>{{ retail.quantity }}</td>
-                </tr>
-            {% endfor %}
+
+    <div id="retail-list-div">
+        <div class="retail-item even" id="retail-item-header">
+            <h3 id = "retail-item-c1">Item</h3>
+            <h3 id = "retail-item-c2">Price</h3>
+            <h3 id = "retail-item-c3">Quantity</h3>
         </div>
+        {% for retail in retail %}
+        <div class="retail-item {% if loop.index is divisibleby(2) %}even{% else %}odd{% endif %}">
+            <p id = "retail-item-c1">{{ retail.item_name }}</p>
+            <p id = "retail-item-c2">{{ retail.price }}</p>
+            <p id = "retail-item-c3">{{ retail.quantity }}</p>
+        </div>
+        {% endfor %}
     </div>
     
     <div id="store-selector-box-js">

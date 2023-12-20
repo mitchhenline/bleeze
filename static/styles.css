@@ -1,5 +1,9 @@
+* {
+    font-family: 'Quicksand', sans-serif;
+}
+
 /* ------------------------------------------------- */
-/* ----------------STORE SELECTOR------------------- */
+/* ----------------STORE SELECTOR PAGE-------------- */
 /* ------------------------------------------------- */
 
 .standard-back {
@@ -62,7 +66,7 @@
 
 .header-bar {
     height: 4%;
-    background-color: #1e1efc;
+    background-color: #2b2bff;
     position: fixed;
     top: 0;
     left: 0;
@@ -101,7 +105,7 @@
     left: 0;
     top: 4%;
     height: 100vh;
-    background-color: #8c25bc;
+    background-color: #4a4a4a;
     color: #f0f0f0;
     width: 12%;
 }
@@ -122,7 +126,7 @@
     align-items: center;
     justify-content: center;
     margin: auto;
-    background-color:#ac42de;
+    background-color:#616161;
     text-decoration: none;
     color: white;
 }
@@ -153,14 +157,14 @@
 }
 
 /*//////////////////////////////////////////////////////*/
-/*////////////////// VIEW RENTER PAGE ///////////////////*/
+/*////////////////// VIEW RENTER PAGE //////////////////*/
 /*//////////////////////////////////////////////////////*/
 
 #renter-list-div {
     position: fixed;
     flex: 4;
     right: 0;
-    bottom: 0;
+    top: 4%;
     width: 88%;
     max-height: 96%;
     overflow: auto;
@@ -227,7 +231,7 @@
     position: fixed;
     flex: 4;
     right: 0;
-    bottom: 0;
+    top: 4%;
     width: 88%;
     max-height: 96%;
     overflow: auto;
@@ -290,6 +294,68 @@
     border-bottom: solid;
 }
 
+/*//////////////////////////////////////////////////////*/
+/*////////////////// VIEW RETAIL PAGE //////////////////*/
+/*//////////////////////////////////////////////////////*/
+
+#retail-list-div {
+    position: fixed;
+    flex: 4;
+    top: 4%;
+    width: 88%;
+    max-height: 96%;
+    overflow: auto;
+}
+
+#retail-list-div a {
+    color: #8c25bc;
+    text-decoration: none;
+}
+
+.retail-item {
+    display: flex;
+    align-items: center;
+    padding: 2%;
+}
+
+.retail-item a {
+    text-decoration: none;
+}
+
+.retail-item p {
+    flex: 1;
+    text-align: center;
+    margin: 0;
+}
+.retail-item.even {
+    background-color: #f0f0f0;
+}
+
+.retail-item.odd {
+    background-color: white;
+}
+
+#retail-item-c1 {
+    position: absolute;
+    left: 10%;
+}
+#retail-item-c2 {
+    position: absolute;
+    left: 25%;
+}
+#retail-item-c3 {
+    position: absolute;
+    left: 40%;
+}
+
+#retail-item-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom-color: #ac42de;
+    border-bottom: solid;
+}
+
 /* ///////////////////////////////////END OF PAGE//////////////////////////////////////// */
 
 #view-unit-div {
@@ -320,7 +386,7 @@
 
 /* ----------VIEW UNIT & RENTER PAGES---------- */
 
-.main-body {
+/* .main-body {
     margin-top: 15%;
 }
 
@@ -330,21 +396,4 @@
     border: 1px solid #ccc;
     max-width: 88%;
     margin-top: 15%;
-}
-
-/* ----------FLASH BOX---------- */
-
-#flash-box {
-    position: fixed;
-    top: 10%;
-    left: 20%;
-    transform: translate(-50%, -50%);
-    z-index: 9999;
-    background-color: white;
-    padding: 30px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-}
-
-#flash-content {
-    margin-bottom: 10px;
-}
+} */

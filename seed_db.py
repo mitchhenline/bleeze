@@ -113,20 +113,18 @@ db.session.add_all([unit1, unit2, unit3, unit4, unit5, unit6, unit7, unit8, unit
 
 #RETAIL
 
-retail1 = Retail(item_name="Lock", price=10.99, quantity=50, store_id=1)
-retail2 = Retail(item_name="Box", price=5.99, quantity=100, store_id=1)
-retail3 = Retail(item_name="Tape", price=1.99, quantity=200, store_id=1)
-retail4 = Retail(item_name="Combination Lock", price=15.99, quantity=30, store_id=1)
-
-retail5 = Retail(item_name="Lock", price=10.99, quantity=40, store_id=2)
-retail6 = Retail(item_name="Box", price=5.99, quantity=80, store_id=2)
-retail7 = Retail(item_name="Tape", price=1.99, quantity=150, store_id=2)
-retail8 = Retail(item_name="Combination Lock", price=15.99, quantity=25, store_id=2)
-
-retail9 = Retail(item_name="Lock", price=10.99, quantity=45, store_id=3)
-retail10 = Retail(item_name="Box", price=5.99, quantity=90, store_id=3)
-retail11 = Retail(item_name="Tape", price=1.99, quantity=180, store_id=3)
-retail12 = Retail(item_name="Combination Lock", price=15.99, quantity=35, store_id=3)
+retail1 = Retail(item_name="Lock", price=10.99, quantity=50, store_id=2)
+retail4 = Retail(item_name="Combination Lock", price=15.99, quantity=30, store_id=2)
+retail2 = Retail(item_name="Small Box", price=3.99, quantity=100, store_id=2)
+retail6 = Retail(item_name="Medium Box", price=4.99, quantity=80, store_id=2)
+retail10 = Retail(item_name="Big Box", price=5.99, quantity=90, store_id=2)
+retail3 = Retail(item_name="Packing Peanuts", price=4.99, quantity=10, store_id=2)
+retail5 = Retail(item_name="Shrink Wrap", price=10.99, quantity=4, store_id=2)
+retail7 = Retail(item_name="Small Roll Tape", price=4.29, quantity=15, store_id=2)
+retail8 = Retail(item_name="Large Roll Tape", price=5.99, quantity=25, store_id=2)
+retail9 = Retail(item_name="Masking Tape", price=3.99, quantity=45, store_id=2)
+retail11 = Retail(item_name="Cleaning Wipes", price=4.99, quantity=18, store_id=2)
+retail12 = Retail(item_name="Tarp", price=17.29, quantity=5, store_id=2)
 
 retail13 = Retail(item_name="Lock", price=10.99, quantity=55, store_id=4)
 retail14 = Retail(item_name="Box", price=5.99, quantity=75, store_id=4)
