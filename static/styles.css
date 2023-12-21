@@ -2,6 +2,8 @@
     font-family: 'Quicksand', sans-serif;
 }
 
+
+
 /* ------------------------------------------------- */
 /* ----------------STORE SELECTOR PAGE-------------- */
 /* ------------------------------------------------- */
@@ -23,14 +25,52 @@
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    background-color: white;
+    /* background-image: url('/static/images/future_bleeze.jpeg');
+    background-size: cover; */
+    background-color: #bba7fc;
+    background-position: center;
     position: relative;
     z-index: 1;
+    border-radius: 5px;
+    box-shadow: 0 0 65px #4f1aa4;
+}
+
+#store-selector-box:hover {
+    box-shadow: 0 0 85px #4f1aa4;
 }
 
 #store-selector-form {
     margin-left: auto;
     margin-right: auto;
+}
+
+#bleeze-logo-store-selector {
+    width: 30%;
+    position: absolute;
+    top: 15%;
+    left: 35%;
+}
+
+#store-selector-form-button {
+    box-shadow: 0 0 4px #ffffff;
+    background-color: #bba7fc;
+    color: #4f1aa4;
+    border-color: #4f1aa4;
+    padding: 5px;
+    border-radius: 2px;
+}
+
+.form-control {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+    border: solid;
+    border-color: #4f1aa4;
 }
 
 /* ----------------------------------------- */
@@ -66,7 +106,7 @@
 
 .header-bar {
     height: 4%;
-    background-color: #2b2bff;
+    background-color: #3855fb;
     position: fixed;
     top: 0;
     left: 0;
@@ -99,34 +139,36 @@
     height: 100vh;
 }
 
+
+
 .sidebar {
     flex: 1;
     position: fixed;
     left: 0;
     top: 4%;
     height: 100vh;
-    background-color: #4a4a4a;
+    background-color: #bba7fc;
     color: #f0f0f0;
     width: 12%;
 }
 
 .sidebar-menu-item {
-    height: 14%;
+    height: 12%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: auto;
     text-decoration: none;
-    color: white;
+    color: #10203f;
 }
 
 .sidebar-menu-item-selected {
-    height: 14%;
+    height: 12%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: auto;
-    background-color:#616161;
+    background-color: #4f1aa4;
     text-decoration: none;
     color: white;
 }
@@ -134,18 +176,28 @@
 
 
 #sidebar-menu-title {
+    position: relative;
+    top: 3%;
     height: 17%;
     align-items: center;
     justify-content: center;
     margin: auto;
 }
 
-
-.sidebar a.sidebar-menu-item:hover {
-    background-color: #333;
+#bleeze_logo {
+    width: 100%;
 }
 
 
+.sidebar a.sidebar-menu-item:hover {
+    background-color:#10203f;
+    color: white;
+}
+
+.sidebar-menu-item-selected:hover {
+    background-color:#10203f;
+    color: white;
+}
 
 #retail-list-div {
     position: fixed;

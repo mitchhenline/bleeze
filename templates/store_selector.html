@@ -6,11 +6,12 @@
 <body class="standard-back">
     
     <div id="store-selector-box">
+        <img id="bleeze-logo-store-selector" src="/static/images/bleeze_logo.jpeg" alt="Bleeze">
         <form id="store-selector-form" method="POST" action="/">
             {{ form.csrf_token }}
             <div class="form-group">
                 <input type="number" class="form-control" name="store_id" id="store_id" placeholder="{{ form.store_id.label.text }}" value="{{ form.store_id.data }}">
-                <br><br><button type="submit">LOGIN</button>
+                <br><br><button id="store-selector-form-button" type="submit">LOGIN</button>
             </div>
         </form>
     </div>
