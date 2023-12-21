@@ -94,21 +94,22 @@ unit17 = Unit(unit_number="B107", size="16x20", rented=True, digital_access=True
 unit18 = Unit(unit_number="B108", size="16x20", rented=True, digital_access=False, type="Climate Controlled", renter_id=3, store_id=2)
 unit19 = Unit(unit_number="B109", size="16x20", rented=True, digital_access=True, type="Climate Controlled", renter_id=5, store_id=2)
 unit20 = Unit(unit_number="B110", size="16x20", rented=False, digital_access=False, type="Climate Controlled", renter_id=None, store_id=2)
-unit21 = Unit(unit_number="RV1", size="RV Parking", rented=True, digital_access=True, type="Parking", renter_id=7, store_id=2)
-unit22 = Unit(unit_number="RV2", size="RV Parking", rented=False, digital_access=False, type="Parking", renter_id=None, store_id=2)
-unit23 = Unit(unit_number="RV3", size="RV Parking", rented=True, digital_access=True, type="Parking", renter_id=9, store_id=2)
-unit24 = Unit(unit_number="RV4", size="RV Parking", rented=False, digital_access=False, type="Parking", renter_id=None, store_id=2)
-unit25 = Unit(unit_number="RV5", size="RV Parking", rented=True, digital_access=True, type="Parking", renter_id=11, store_id=2)
+unit21 = Unit(unit_number="P1", size="Parking", rented=True, digital_access=True, type="Parking", renter_id=7, store_id=2)
+unit22 = Unit(unit_number="P2", size="Parking", rented=False, digital_access=False, type="Parking", renter_id=None, store_id=2)
+unit23 = Unit(unit_number="P3", size="Parking", rented=True, digital_access=True, type="Parking", renter_id=9, store_id=2)
+unit24 = Unit(unit_number="P4", size="Parking", rented=False, digital_access=False, type="Parking", renter_id=None, store_id=2)
+unit25 = Unit(unit_number="P5", size="Parking", rented=True, digital_access=True, type="Parking", renter_id=11, store_id=2)
 unit26 = Unit(unit_number="C01", size="10x12", rented=False, digital_access=False, type="Standard", renter_id=None, store_id=2)
 unit27 = Unit(unit_number="C02", size="10x12", rented=True, digital_access=True, type="Standard", renter_id=13, store_id=2)
 unit28 = Unit(unit_number="C03", size="10x12", rented=False, digital_access=False, type="Standard", renter_id=None, store_id=2)
 unit29 = Unit(unit_number="C04", size="10x12", rented=True, digital_access=True, type="Standard", renter_id=1, store_id=2)
 unit30 = Unit(unit_number="C05", size="10x12", rented=False, digital_access=False, type="Standard", renter_id=None, store_id=2)
+unit31 = Unit(unit_number="C06", size="10x12", rented=False, digital_access=False, type="Standard", renter_id=None, store_id=2)
 
 
 db.session.add_all([unit1, unit2, unit3, unit4, unit5, unit6, unit7, unit8, unit9, unit10, 
                    unit11, unit12, unit13, unit14, unit15, unit16, unit17, unit18, unit19, 
-                   unit20, unit21, unit22, unit23, unit24, unit25, unit26, unit27, unit28, unit29, unit30])
+                   unit20, unit21, unit22, unit23, unit24, unit25, unit26, unit27, unit28, unit29, unit30, unit31])
 
 
 #RETAIL

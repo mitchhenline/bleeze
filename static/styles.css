@@ -36,7 +36,7 @@
 }
 
 #store-selector-box:hover {
-    box-shadow: 0 0 85px #4f1aa4;
+    box-shadow: 0 0 75px #4f1aa4;
 }
 
 #store-selector-form {
@@ -139,8 +139,6 @@
     height: 100vh;
 }
 
-
-
 .sidebar {
     flex: 1;
     position: fixed;
@@ -150,6 +148,10 @@
     background-color: #bba7fc;
     color: #f0f0f0;
     width: 12%;
+    border-right: solid;
+    border-right-width: 2px;
+    border-color: #10203f;
+    z-index: 100;
 }
 
 .sidebar-menu-item {
@@ -199,18 +201,14 @@
     color: white;
 }
 
-#retail-list-div {
-    position: fixed;
-    flex: 4;
-    right: 0;
-    width: 88%;
-    max-height: 96%;
-    overflow: auto;
-}
-
 /*//////////////////////////////////////////////////////*/
 /*////////////////// VIEW RENTER PAGE //////////////////*/
 /*//////////////////////////////////////////////////////*/
+
+/* #bleeze-div-heading { */
+    /* background-image: url('/static/images/bleeze_graffiti.jpeg'); */
+    /* background-size: cover; */
+/* } */
 
 #renter-list-div {
     position: fixed;
@@ -279,17 +277,19 @@
 /*////////////////// VIEW STORE PAGE ///////////////////*/
 /*//////////////////////////////////////////////////////*/
 
-#unit_list_div {
+#unit-list-div {
     position: fixed;
     flex: 4;
     right: 0;
-    top: 4%;
+    top: 35%;
     width: 88%;
     max-height: 96%;
     overflow: auto;
+    border-top: solid;
+    border-color: #10203f;
 }
 
-#unit_list_div a {
+#unit-list-div a {
     color: #8c25bc;
     text-decoration: none;
 }
@@ -346,14 +346,27 @@
     border-bottom: solid;
 }
 
+#header-image {
+    width: 90%;
+    position: fixed;
+    left: 12%;
+    z-index: -1;
+}
+
+/* #unit-selector-header {
+    
+} */
+
+
 /*//////////////////////////////////////////////////////*/
 /*////////////////// VIEW RETAIL PAGE //////////////////*/
 /*//////////////////////////////////////////////////////*/
 
 #retail-list-div {
     position: fixed;
-    flex: 4;
     top: 4%;
+    flex: 4;
+    right: 0;
     width: 88%;
     max-height: 96%;
     overflow: auto;
