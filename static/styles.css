@@ -214,11 +214,14 @@
     position: fixed;
     flex: 4;
     right: 0;
-    top: 4%;
+    top: 35%;
     width: 88%;
     max-height: 96%;
     overflow: auto;
+    border-top: solid;
+    border-color: #10203f;
 }
+
 
 #renter-list-div a {
     color: #8c25bc;
@@ -353,9 +356,6 @@
     z-index: -1;
 }
 
-/* #unit-selector-header {
-    
-} */
 
 
 /*//////////////////////////////////////////////////////*/
@@ -421,7 +421,32 @@
     border-bottom: solid;
 }
 
-/* ///////////////////////////////////END OF PAGE//////////////////////////////////////// */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ///////////////////////////////////VIEW UNITS ETC//////////////////////////////////////// */
 
 #view-unit-div {
     position: fixed;
