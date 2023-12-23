@@ -45,14 +45,18 @@
         </a>
     </div>
 
-    <div id="retail-list-div">
-        <div class="retail-item even" id="retail-item-header">
+    <div class="pri-selector-header">
+        <img id="header-image" src='/static/images/bss_car.jpeg'>
+    </div>
+
+    <div class="pri-list-div">
+        <div class="pri-item even" id="pri-item-header">
             <h3 id = "retail-item-c1">Item</h3>
             <h3 id = "retail-item-c2">Price</h3>
             <h3 id = "retail-item-c3">Quantity</h3>
         </div>
         {% for retail in retail %}
-        <div class="retail-item {% if loop.index is divisibleby(2) %}even{% else %}odd{% endif %}">
+        <div class="pri-item {% if loop.index is divisibleby(2) %}even{% else %}odd{% endif %}">
             <p id = "retail-item-c1">{{ retail.item_name }}</p>
             <p id = "retail-item-c2">{{ retail.price }}</p>
             <p id = "retail-item-c3">{{ retail.quantity }}</p>

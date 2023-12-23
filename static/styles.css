@@ -2,8 +2,6 @@
     font-family: 'Quicksand', sans-serif;
 }
 
-
-
 /* ------------------------------------------------- */
 /* ----------------STORE SELECTOR PAGE-------------- */
 /* ------------------------------------------------- */
@@ -130,7 +128,7 @@
 }
 
 /* ///////////////////////////////////////////// */
-/* -------------MAIN PAGE LAYOUT---------------- */
+/* -------------------SIDEBAR------------------- */
 /* ///////////////////////////////////////////// */
 
 .container {
@@ -152,6 +150,8 @@
     border-right-width: 2px;
     border-color: #10203f;
     z-index: 100;
+    box-shadow: 0 0 35px #4f1aa4;
+
 }
 
 .sidebar-menu-item {
@@ -173,8 +173,8 @@
     background-color: #4f1aa4;
     text-decoration: none;
     color: white;
+    box-shadow: 0 0 65px #4f1aa4;
 }
-
 
 
 #sidebar-menu-title {
@@ -184,6 +184,7 @@
     align-items: center;
     justify-content: center;
     margin: auto;
+    margin-bottom: 13%;
 }
 
 #bleeze_logo {
@@ -201,55 +202,68 @@
     color: white;
 }
 
-/*//////////////////////////////////////////////////////*/
-/*////////////////// VIEW RENTER PAGE //////////////////*/
-/*//////////////////////////////////////////////////////*/
+/* ///////////////////////////////////////////// */
+/* ------------MAIN SECTION STYLING------------- */
+/* ///////////////////////////////////////////// */
 
-/* #bleeze-div-heading { */
-    /* background-image: url('/static/images/bleeze_graffiti.jpeg'); */
-    /* background-size: cover; */
-/* } */
+#header-image {
+    width: 90%;
+    position: fixed;
+    left: 12%;
+    z-index: -1;
+}
 
-#renter-list-div {
+.pri-list-div {
     position: fixed;
     flex: 4;
     right: 0;
     top: 35%;
     width: 88%;
-    max-height: 96%;
+    max-height: 64%;
     overflow: auto;
     border-top: solid;
     border-color: #10203f;
 }
 
-
-#renter-list-div a {
+.pri-list-div a {
     color: #8c25bc;
     text-decoration: none;
 }
 
-.renter-item {
+.pri-item {
     display: flex;
     align-items: center;
     padding: 2%;
 }
 
-.renter-item a {
+.pri-item a {
     text-decoration: none;
 }
 
-.renter-item p {
+.pri-item p {
     flex: 1;
     text-align: center;
     margin: 0;
 }
-.renter-item.even {
+.pri-item.even {
     background-color: #f0f0f0;
 }
 
-.renter-item.odd {
+.pri-item.odd {
     background-color: white;
 }
+
+#pri-item-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom-color: #ac42de;
+    border-bottom: solid;
+}
+
+/*//////////////////////////////////////////////////////*/
+/*///////// RENTER/STORE/EMAIL MENU COLUMNS ////////////*/
+/*//////////////////////////////////////////////////////*/
 
 #renter-item-c1 {
     position: absolute;
@@ -266,58 +280,6 @@
 #renter-item-c4 {
     position: absolute;
     left: 55%;
-}
-
-#renter-item-header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    border-bottom-color: #ac42de;
-    border-bottom: solid;
-}
-
-/*//////////////////////////////////////////////////////*/
-/*////////////////// VIEW STORE PAGE ///////////////////*/
-/*//////////////////////////////////////////////////////*/
-
-#unit-list-div {
-    position: fixed;
-    flex: 4;
-    right: 0;
-    top: 35%;
-    width: 88%;
-    max-height: 96%;
-    overflow: auto;
-    border-top: solid;
-    border-color: #10203f;
-}
-
-#unit-list-div a {
-    color: #8c25bc;
-    text-decoration: none;
-}
-
-.unit-item {
-    display: flex;
-    align-items: center;
-    padding: 2%;
-}
-
-.unit-item a {
-    text-decoration: none;
-}
-
-.unit-item p {
-    flex: 1;
-    text-align: center;
-    margin: 0;
-}
-.unit-item.even {
-    background-color: #f0f0f0;
-}
-
-.unit-item.odd {
-    background-color: white;
 }
 
 #unit-item-c1 {
@@ -341,65 +303,6 @@
     left: 70%;
 }
 
-#unit-item-header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    border-bottom-color: #ac42de;
-    border-bottom: solid;
-}
-
-#header-image {
-    width: 90%;
-    position: fixed;
-    left: 12%;
-    z-index: -1;
-}
-
-
-
-/*//////////////////////////////////////////////////////*/
-/*////////////////// VIEW RETAIL PAGE //////////////////*/
-/*//////////////////////////////////////////////////////*/
-
-#retail-list-div {
-    position: fixed;
-    top: 4%;
-    flex: 4;
-    right: 0;
-    width: 88%;
-    max-height: 96%;
-    overflow: auto;
-}
-
-#retail-list-div a {
-    color: #8c25bc;
-    text-decoration: none;
-}
-
-.retail-item {
-    display: flex;
-    align-items: center;
-    padding: 2%;
-}
-
-.retail-item a {
-    text-decoration: none;
-}
-
-.retail-item p {
-    flex: 1;
-    text-align: center;
-    margin: 0;
-}
-.retail-item.even {
-    background-color: #f0f0f0;
-}
-
-.retail-item.odd {
-    background-color: white;
-}
-
 #retail-item-c1 {
     position: absolute;
     left: 10%;
@@ -411,14 +314,6 @@
 #retail-item-c3 {
     position: absolute;
     left: 40%;
-}
-
-#retail-item-header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    border-bottom-color: #ac42de;
-    border-bottom: solid;
 }
 
 
@@ -487,3 +382,4 @@
     max-width: 88%;
     margin-top: 15%;
 } */
+

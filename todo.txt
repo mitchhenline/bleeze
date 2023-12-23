@@ -1,4 +1,6 @@
 FIX SCROLLING BUG
+   ON STORE PAGE cant scroll to bottom
+   AND CONTACT PAGE cant scroll at all
 Change store selector a js popup, do for all pages
 
 -apply styling to customer pages

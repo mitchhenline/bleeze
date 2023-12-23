@@ -44,13 +44,13 @@
             </div>
         </a>
     </div>
-    
-    <div id="unit-selector-header">
+
+    <div class="pri-selector-header">
         <img id="header-image" src='/static/images/bleeze_graffiti.jpeg'>
     </div>
 
-    <div id="unit-list-div">
-        <div class="unit-item even" id="unit-item-header">
+    <div class="pri-list-div">
+        <div class="pri-item even" id="pri-item-header">
             <h3 id = "unit-item-c1">Unit Number</h3>
             <h3 id = "unit-item-c2">Size</h3>
             <h3 id = "unit-item-c3">Status</h3>
@@ -58,7 +58,7 @@
             <h3 id = "unit-item-c5">Tenant</h3>
         </div>
         {% for unit in units %}
-        <div class="unit-item {% if loop.index is divisibleby(2) %}even{% else %}odd{% endif %}">
+        <div class="pri-item {% if loop.index is divisibleby(2) %}even{% else %}odd{% endif %}">
             <p id = "unit-item-c1"><a href="/{{ store.id }}/unit/{{ unit.id }}">{{ unit.unit_number }}</a></p>
             <p id = "unit-item-c2">{{ unit.size }}</p>
             <p id = "unit-item-c3">{% if unit.rented %}Occupied{% else %}Vacant{% endif %}</p>
