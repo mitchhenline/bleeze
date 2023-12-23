@@ -1,21 +1,17 @@
 FIX SCROLLING BUG
-   ON STORE PAGE cant scroll to bottom
-   AND CONTACT PAGE cant scroll at all
+
 Change store selector a js popup, do for all pages
 
--apply styling to customer pages
--add sidebar items for view customer list page
--add customer list page
-
--make sidebar dark grey for whatever one is selected
+Make selectors darker in color
+Button styling to match SS page
 
 1. customer info page
+
+
     -Create "tenant manager page"
-2. do basic styling
-    -in store, option to view occupied, view vacant, view by type, etc
+
 3. add forms, buttons to rent units etc
     -new customer form
     -select unit
     -drop down list of customers (for now on a special 'rent unit' page)
         -put link to 'rent unit' page in the unit manager page
-fix flash messages and where they show up

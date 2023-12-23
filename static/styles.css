@@ -387,6 +387,11 @@
     background-image: url('/static/images/future_bleeze.jpeg');
 }
 
+#dash-pic {
+    background-image: url('/static/images/bleeze_graf.jpeg');
+    top: 20%;
+}
+
 .ind-div-info-box {
     position: absolute;
     background-color: white;
