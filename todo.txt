@@ -1,4 +1,3 @@
-FIX SCROLLING BUG
 
 Change store selector a js popup, do for all pages
 

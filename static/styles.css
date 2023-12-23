@@ -135,6 +135,7 @@
     margin: 0;
     display: flex;
     height: 100vh;
+    
 }
 
 .sidebar {
@@ -211,6 +212,7 @@
     position: fixed;
     left: 12%;
     z-index: -1;
+    
 }
 
 .pri-list-div {
@@ -219,14 +221,15 @@
     right: 0;
     top: 35%;
     width: 88%;
-    max-height: 64%;
+    max-height: 65%;
     overflow: auto;
     border-top: solid;
     border-color: #10203f;
+    
 }
 
 .pri-list-div a {
-    color: #8c25bc;
+    color: #ffffff;
     text-decoration: none;
 }
 
@@ -238,6 +241,7 @@
 
 .pri-item a {
     text-decoration: none;
+    color:#ac42de;
 }
 
 .pri-item p {
@@ -246,11 +250,13 @@
     margin: 0;
 }
 .pri-item.even {
-    background-color: #f0f0f0;
+    background-color: #4f1aa4;
+    color: white;
 }
 
 .pri-item.odd {
-    background-color: white;
+    background-color: #2e066e;
+    color: white;
 }
 
 #pri-item-header {
@@ -259,6 +265,10 @@
     z-index: 100;
     border-bottom-color: #ac42de;
     border-bottom: solid;
+    border-width: 2px;
+    background: linear-gradient(to bottom, #1a1a1a, #350e6a);
+    color: white;
+    
 }
 
 /*//////////////////////////////////////////////////////*/
