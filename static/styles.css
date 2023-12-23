@@ -173,7 +173,7 @@
     background-color: #4f1aa4;
     text-decoration: none;
     color: white;
-    box-shadow: 0 0 65px #4f1aa4;
+    box-shadow: 0 0 55px #4f1aa4;
 }
 
 
@@ -341,45 +341,64 @@
 
 
 
+/* ///////////////////////////////////////////////////////////////////////////////////////// */
 /* ///////////////////////////////////VIEW UNITS ETC//////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////// */
 
-#view-unit-div {
+#view-ind-div {
     position: fixed;
     flex: 4;
-    right: 0;
-    top: 5%;
-    width: 88%;
+    right: 0%;
+    top: 4%;
+    width: 50%;
     max-height: 96%;
     overflow: auto;
+    background: linear-gradient(to bottom, #1a1a1a, #350e6a);
+    width: 88%;
+    height: 100%;
 }
 
-#view-unit-div a {
+#view-ind-div a {
     color: #8c25bc;
     text-decoration: none;
 }
 
-
-.line {
-    width: 100%;
-    height: 1px;
-    background-color: black;
+.ind-div-pic {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: -1;
+    background-color: white;
+    padding: 0px;
+    border: 1px solid #4f1aa4;
+    height: 45%;
+    width: 30%;
+    left: 8%;
+    top: 45%;
+    box-shadow: 0 0 95px #4f1aa4;
+    background-color: #bba7fc;
+    border-radius: 5px;
+    
+    background-size: cover;
 }
 
-/* ----------VIEW UNIT & RENTER PAGES---------- */
-
-/* .main-body {
-    margin-top: 15%;
+#renter-pic {
+    background-image: url('/static/images/hppy.jpeg');
 }
 
-.details {
+#unit-pic {
+    background-image: url('/static/images/future_bleeze.jpeg');
+}
+
+.ind-div-info-box {
+    position: absolute;
     background-color: white;
     padding: 20px;
-    border: 1px solid #ccc;
-    max-width: 88%;
-    margin-top: 15%;
-} */
+    border: 1px solid #4f1aa4;
+    width: 40%;
+    top: 10%;
+    right: 7%;
+    box-shadow: 0 0 95px #4f1aa4;
+    background-color: #bba7fc;
+    border-radius: 5px;
+}
+
+
 
