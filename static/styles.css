@@ -224,7 +224,8 @@
     max-height: 65%;
     overflow: auto;
     border-top: solid;
-    border-color: #10203f;
+    border-bottom: solid;
+    border-color: #ffffff;
     
 }
 
@@ -241,7 +242,9 @@
 
 .pri-item a {
     text-decoration: none;
-    color:#ac42de;
+    color:#cc5fff;
+    
+    
 }
 
 .pri-item p {
