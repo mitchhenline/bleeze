@@ -61,25 +61,25 @@
                     {% if unit.rented == False %}
                     
                     <form method="POST" action="/{{ store.id }}/unit/{{ unit.id }}">
-                        {{ form.first_name.label }} {{ form.first_name(size=20) }}
-                        {{ form.last_name.label }} {{ form.last_name(size=20) }}    
+                        {{ form.first_name.label }} {{ form.first_name(size=20) }}<br>
+                        {{ form.last_name.label }} {{ form.last_name(size=20) }} <br>   
                         <label for="{{ form.month_of_birth.id }}">Month of Birth:</label>
                         <select id="{{ form.month_of_birth.id }}" name="{{ form.month_of_birth.name }}">
                             {% for choice in form.month_of_birth.choices %}
                             <option value="{{ choice[0] }}">{{ choice[1] }}</option>
                             {% endfor %}
-                        </select>
+                        </select><br>
                         <label for="{{ form.day_of_birth.id }}">Day of Birth:</label>
                         <select id="{{ form.day_of_birth.id }}" name="{{ form.day_of_birth.name }}">
                             {% for choice in form.day_of_birth.choices %}
                             <option value="{{ choice[0] }}">{{ choice[1] }}</option>
                             {% endfor %}
-                        </select>
-                        {{ form.year_of_birth.label }} {{ form.year_of_birth(size=4) }}
-                        {{ form.street_address.label }} {{ form.street_address(size=40) }}
-                        {{ form.city.label }} {{ form.city(size=25) }}
-                        {{ form.state.label }} {{ form.state(size=25) }}
-                        {{ form.zip.label }} {{ form.zip(size=5) }}
+                        </select><br>
+                        {{ form.year_of_birth.label }} {{ form.year_of_birth(size=4) }}<br>
+                        {{ form.street_address.label }} {{ form.street_address(size=40) }}<br>
+                        {{ form.city.label }} {{ form.city(size=25) }}<br>
+                        {{ form.state.label }} {{ form.state(size=25) }}<br>
+                        {{ form.zip.label }} {{ form.zip(size=5) }}<br>
                         {{ form.phone_number.label }} {{ form.phone_number(size=15) }}
                         {{ form.csrf_token() }}
                         
