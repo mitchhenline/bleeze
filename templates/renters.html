@@ -61,7 +61,7 @@
             <p id = "renter-item-c1"><a href="/{{ store.id }}/renters/{{ renter.id }}">{{ renter.first_name }} {{ renter.last_name }}</a></p>
             <p id = "renter-item-c2">{{ renter.city }}</p>
             <p id = "renter-item-c3">{{ renter.phone_number }}</p>
-            <p id = "renter-item-c4">Current Renter?</p>
+            <p id = "renter-item-c4">{{ renter.email }}</p>
         </div>
         {% endfor %}
     </div>

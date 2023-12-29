@@ -76,6 +76,7 @@ def rent_unit(store_id, unit_id):
             state=form.state.data,
             zip=form.zip.data,
             phone_number=form.phone_number.data,
+            email=form.email.data
         )
 
         db.session.add(new_tenant)
